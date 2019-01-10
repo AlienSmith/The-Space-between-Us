@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1">
+		<properties SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="10" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="21"/>
+					</targets>
+					<view ltx="674" lty="88" rbx="809" rby="105"/>
+					<data>
+						<constant value="List of participants" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="595" lty="167" rbx="641" rby="184"/>
+					<data>
+						<constant value=", " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="string-join" library="core" uid="11" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="23"/>
+						<datapoint pos="2" key="24"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="674" lty="112" rbx="795" rby="182"/>
+				</component>
+				<component name="ShortInfo" library="xml" uid="9" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="841" lty="16" rbx="1043" rby="162"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="ShortInfo" expanded="1">
+										<entry name="Info" expanded="1">
+											<entry name="Title" inpkey="1"/>
+											<entry name="Description" expanded="1">
+												<entry name="#text" inpkey="37"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ShortInfo.xsd" instanceroot="{}ShortInfo" sps="ShortInfo.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="20" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="559" lty="258" rbx="602" rby="275"/>
+					<data>
+						<constant value=" " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="KeyValueList" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="8" lty="112" rbx="218" rby="231"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="KeyValueList" expanded="1">
+										<entry name="Item" outkey="33" expanded="1">
+											<entry name="Property" outkey="9" expanded="1">
+												<entry name="Key" type="attribute" outkey="10"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="KeyValueList.xsd" inputinstance="KeyValueList.xml" instanceroot="{}KeyValueList"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="23" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="327" lty="112" rbx="477" rby="312"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="document" expanded="1" casttotargettypemode="cast-in-subtree">
+								<entry name="Person" ns="1" inpkey="61" expanded="1" use-generic-elements="1">
+									<entry name="element()" inpkey="62" expanded="1" show-schema-children="0">
+										<typeselections>
+											<type>
+												<entry name="text()" type="xml-type"/>
+											</type>
+										</typeselections>
+										<entry name="LocalName" inpkey="63"/>
+										<entry name="#text" type="xml-type" inpkey="64"/>
+									</entry>
+									<entry name="First" ns="1" outkey="65"/>
+									<entry name="Last" ns="1" outkey="66"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="PersonList.xsd"/>
+						<parameter usageKind="variable">
+							<root>
+								<entry name="PersonList"/>
+								<entry name="Person"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="16" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="29"/>
+						<datapoint pos="1" key="30"/>
+						<datapoint pos="2" key="31"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="32"/>
+					</targets>
+					<view ltx="631" lty="219" rbx="719" rby="292"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="62" edgekey="67"/>
+							<edge vertexkey="64" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="63" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="24" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="1" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="37" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="30" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="23" edgekey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="61" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="29" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="31" edgekey="73"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

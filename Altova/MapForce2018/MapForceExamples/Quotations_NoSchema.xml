@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GENERIC_EXPORT>
+	<META>
+		<Field1 name="FirstName" type="string" maxLength="30"/>
+		<Field2 name="LastName" type="string" maxLength="30"/>
+		<Field3 name="DOB" type="int"/>
+		<Field4 name="Quotation" type="string" maxLength="160"/>
+	</META>
+	<VALUES>
+		<Entry1>
+			<Field1>Albert</Field1>
+			<Field2>Einstein</Field2>
+			<Field3>1879</Field3>
+			<Field4>Only two things are infinite, the universe and human stupidity, and I&apos;m not sure about the former.</Field4>
+		</Entry1>
+		<Entry2>
+			<Field1>Woody</Field1>
+			<Field2>Allen</Field2>
+			<Field3>1935</Field3>
+			<Field4>When I was kidnapped, my parents snapped into &quot;action&quot;. They rented out my room.</Field4>
+		</Entry2>
+		<Entry3>
+			<Field1>Mark</Field1>
+			<Field2>Twain</Field2>
+			<Field3>1835</Field3>
+			<Field4>A banker is a fellow who lends you his umbrella when the sun is shining, but wants it back the minute it begins to rain.</Field4>
+		</Entry3>
+	</VALUES>
+</GENERIC_EXPORT>

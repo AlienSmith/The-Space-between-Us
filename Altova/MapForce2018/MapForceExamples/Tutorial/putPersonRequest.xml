@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:m0="http://www.altova.com/WS2DB.xsd">
+   <SOAP-ENV:Body>
+      <putPerson SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <Put xsi:type="m0:Person">
+            <First xsi:type="xsd:string">John</First>
+            <Last xsi:type="xsd:string">Doe</Last>
+            <Title xsi:type="xsd:string">Mr</Title>
+            <PhoneEXT xsi:type="xsd:string">123</PhoneEXT>
+            <Email xsi:type="xsd:string">john.doe@example.org</Email>
+         </Put>
+      </putPerson>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

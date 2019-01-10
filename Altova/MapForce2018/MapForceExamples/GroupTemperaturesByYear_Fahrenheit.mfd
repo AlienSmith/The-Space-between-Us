@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2018r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="31">
+	<resources/>
+	<component name="defaultmap1" uid="9" editable="1">
+		<properties ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="substring-before" library="core" uid="4" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="17"/>
+						<datapoint pos="1" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="355" lty="72" rbx="469" rby="126"/>
+				</component>
+				<component name="avg" library="core" uid="8" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="24"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="418" lty="288" rbx="539" rby="342"/>
+				</component>
+				<component name="max" library="core" uid="7" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="22"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="418" lty="226" rbx="539" rby="280"/>
+				</component>
+				<component name="group-by" library="core" uid="3" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="30"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+						<datapoint pos="1" key="10"/>
+					</targets>
+					<view ltx="502" lty="21" rbx="616" rby="75"/>
+				</component>
+				<component name="min" library="core" uid="6" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="20"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="32"/>
+					</targets>
+					<view ltx="418" lty="164" rbx="539" rby="218"/>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="267" lty="104" rbx="311" rby="121"/>
+					<data>
+						<constant value="-" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="TemperaturesYearly" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="708" lty="5" rbx="906" rby="220"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Temperatures" expanded="1">
+										<entry name="YearlyStats" inpkey="14" expanded="1">
+											<inputnodefunctions>
+												<rule applyto="descendants">
+													<function name="35F2ECD9-F69F-498C-BCDA-969EE7F2797C"/>
+													<filter datatype="decimal"/>
+												</rule>
+											</inputnodefunctions>
+											<entry name="Year" type="attribute" inpkey="11">
+												<inputnodefunctions inherit="block"/>
+											</entry>
+											<entry name="MinimumTemp" inpkey="33"/>
+											<entry name="MaximumTemp" inpkey="27"/>
+											<entry name="AverageTemp" inpkey="5"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="TemperaturesYearly.xsd" instanceroot="{}Temperatures" sps="TemperaturesYearly.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Temperatures" library="xml" uid="1" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="150" rby="200"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Temperatures" expanded="1">
+										<entry name="data" outkey="29" expanded="1">
+											<entry name="temp" type="attribute" outkey="19"/>
+											<entry name="month" type="attribute" outkey="16"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Temperatures.xsd" inputinstance="Temperatures.xml" outputinstance="Temperatures.xml" instanceroot="{}Temperatures"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="1" to="2"/>
+			<edge from="4" to="5"/>
+			<edge from="7" to="8"/>
+			<edge from="10" to="11"/>
+			<edge from="13" to="14"/>
+			<edge from="16" to="17"/>
+			<edge from="19" to="20"/>
+			<edge from="19" to="22"/>
+			<edge from="19" to="24"/>
+			<edge from="26" to="27"/>
+			<edge from="29" to="30"/>
+			<edge from="32" to="33"/>
+		</connections>
+	</component>
+	<component name="CelsiusToFahrenheit" library="user" uid="13" editable="1">
+		<properties/>
+		<description/>
+		<structure>
+			<children>
+				<component name="celsius" library="core" uid="15" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="53" rbx="140" rby="38"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="celsius"/>
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="17" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+						<datapoint pos="1" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="265" lty="39" rbx="343" rby="95"/>
+				</component>
+				<component name="constant" library="core" uid="20" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="190" lty="103" rbx="229" rby="120"/>
+					<data>
+						<constant value="9" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="21" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="419" lty="103" rbx="457" rby="120"/>
+					<data>
+						<constant value="5" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="22" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="593" lty="142" rbx="637" rby="159"/>
+					<data>
+						<constant value="32" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="add" library="core" uid="19" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="8"/>
+						<datapoint pos="1" key="9"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="689" lty="103" rbx="767" rby="159"/>
+				</component>
+				<component name="fahrenheit" library="core" uid="14" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+					</sources>
+					<view ltx="889" rbx="971" rby="38"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="fahrenheit"/>
+					</data>
+				</component>
+				<component name="divide" library="core" uid="18" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="12"/>
+						<datapoint pos="1" key="13"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="497" lty="66" rbx="575" rby="120"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="1" to="2"/>
+			<edge from="5" to="3"/>
+			<edge from="14" to="8"/>
+			<edge from="7" to="9"/>
+			<edge from="10" to="11"/>
+			<edge from="4" to="12"/>
+			<edge from="6" to="13"/>
+		</connections>
+	</component>
+	<component name="35F2ECD9-F69F-498C-BCDA-969EE7F2797C" library="mapforce_nodefunction" uid="10" editable="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="raw_value" library="core" uid="11" kind="6">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view rbx="78" rby="38"/>
+					<data>
+						<input datatype="anySimpleType"/>
+						<parameter usageKind="input" name="raw_value"/>
+					</data>
+				</component>
+				<component name="result" library="core" uid="12" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+					</sources>
+					<view ltx="800" rbx="857" rby="38"/>
+					<data>
+						<output datatype="anySimpleType"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="CelsiusToFahrenheit" library="user" uid="16" kind="19" visible="0">
+					<view ltx="230" rbx="432" rby="17"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="celsius" inpkey="3" componentid="15"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="fahrenheit" outkey="4" componentid="14"/>
+						</root>
+					</data>
+				</component>
+				<component name="round" library="core" uid="23" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="600" rbx="672" rby="38"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="6" to="2"/>
+			<edge from="1" to="3"/>
+			<edge from="4" to="5"/>
+		</connections>
+	</component>
+</mapping>

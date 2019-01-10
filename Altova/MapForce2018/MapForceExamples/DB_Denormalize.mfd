@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="30">
+	<resources>
+		<datasources>
+			<datasource name="altova">
+				<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.mdb);DBQ=altova.mdb;" DBDataSource="altova.mdb" DBCatalog="altova" OLEDBProvider="Microsoft.Jet.OLEDB.4.0"/>
+				<database_connection vendor="microsoftaccess" import_kind="ADO" version="4.0" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=altova.mdb" name="altova" path="altova" use_driver_for_retrieval="Yes">
+					<properties>
+						<property name="Database Kind" value="MS Access"/>
+						<property name="Import Kind" value="ADO"/>
+						<property name="Root Object" value="altova"/>
+						<property name="Data Source" value="altova.mdb"/>
+						<property name="Provider" value="Microsoft.Jet.OLEDB.4.0"/>
+						<property name="User ID"/>
+						<property name="Password"/>
+						<property name="Persist Security Info"/>
+						<property name="Jet OLEDB:System Database"/>
+						<property name="Jet OLEDB:Sandbox Mode"/>
+						<property name="Jet OLEDB:Exclusive Async Delay"/>
+						<property name="Jet OLEDB:Flush Transaction Timeout"/>
+						<property name="Jet OLEDB:Implicit Commit Sync"/>
+						<property name="Jet OLEDB:Lock Delay"/>
+						<property name="Jet OLEDB:Lock Retry"/>
+						<property name="Jet OLEDB:Max Buffer Size"/>
+						<property name="Jet OLEDB:Max Locks Per File"/>
+						<property name="Jet OLEDB:Page Locks to Table Lock"/>
+						<property name="Jet OLEDB:Page Timeout"/>
+						<property name="Jet OLEDB:Recycle Long-Valued Pages"/>
+						<property name="Jet OLEDB:Shared Async Delay"/>
+						<property name="Jet OLEDB:User Commit Sync"/>
+						<property name="Jet OLEDB:Compact Without Replica Repair"/>
+						<property name="Jet OLEDB:Create System Database"/>
+						<property name="Jet OLEDB:Database Locking Mode"/>
+						<property name="Jet OLEDB:Database Password"/>
+						<property name="Jet OLEDB:New Database Password"/>
+						<property name="Jet OLEDB:Registry Path"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap1" uid="48863048" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="concat" library="core" uid="48863051" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="125"/>
+						<datapoint pos="1" key="126"/>
+						<datapoint pos="2" key="127"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="128"/>
+					</targets>
+					<view ltx="627" lty="352" rbx="715" rby="425"/>
+				</component>
+				<component name="constant" library="core" uid="48863052" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="124"/>
+					</targets>
+					<view ltx="561" lty="445" rbx="611" rby="462"/>
+					<data>
+						<constant value=" - " datatype="string"/>
+					</data>
+				</component>
+				<component name="People" library="text" uid="48863049" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="690" rbx="861" rby="191"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" inpkey="105" expanded="1">
+										<entry name="Office" inpkey="106"/>
+										<entry name="Department" inpkey="107"/>
+										<entry name="First" inpkey="108"/>
+										<entry name="Last" inpkey="109"/>
+										<entry name="Title" inpkey="110"/>
+										<entry name="EMail" inpkey="111"/>
+										<entry name="Phone" inpkey="112"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Office" type="string"/>
+									<field1 name="Department" type="string"/>
+									<field2 name="First" type="string"/>
+									<field3 name="Last" type="string"/>
+									<field4 name="Title" type="string"/>
+									<field5 name="EMail" type="string"/>
+									<field6 name="Phone" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="38630232" kind="15">
+					<properties/>
+					<view rbx="163" rby="145"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="Altova" type="table">
+									<entry name="PrimaryKey" expanded="1"/>
+									<entry name="Name" expanded="1"/>
+									<entry name="Office|ForeignKey" type="table">
+										<entry name="PrimaryKey" expanded="1"/>
+										<entry name="ForeignKey" expanded="1"/>
+										<entry name="Desc" expanded="1"/>
+										<entry name="EMail" expanded="1"/>
+										<entry name="Established" expanded="1"/>
+										<entry name="Fax" expanded="1"/>
+										<entry name="Name" expanded="1"/>
+										<entry name="Phone" expanded="1"/>
+										<entry name="Address|ForeignKey" type="table">
+											<entry name="PrimaryKey" expanded="1"/>
+											<entry name="ForeignKey" expanded="1"/>
+											<entry name="city" expanded="1"/>
+											<entry name="state" expanded="1"/>
+											<entry name="street" expanded="1"/>
+											<entry name="zip" expanded="1"/>
+										</entry>
+										<entry name="Department|ForeignKey" type="table">
+											<entry name="PrimaryKey" expanded="1"/>
+											<entry name="ForeignKey" expanded="1"/>
+											<entry name="Name" expanded="1"/>
+											<entry name="Person|ForeignKey" type="table">
+												<entry name="PrimaryKey" expanded="1"/>
+												<entry name="ForeignKey" expanded="1"/>
+												<entry name="EMail" expanded="1"/>
+												<entry name="First" expanded="1"/>
+												<entry name="Last" expanded="1"/>
+												<entry name="PhoneExt" expanded="1"/>
+												<entry name="Title" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="Department" type="table" outkey="150"/>
+								<entry name="Office" type="table" outkey="144">
+									<entry name="Department|ForeignKey" type="table">
+										<entry name="Person|ForeignKey" type="table" expanded="1"/>
+									</entry>
+								</entry>
+								<entry name="Person" type="table" outkey="151"/>
+							</entry>
+						</root>
+						<database ref="altova">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Address" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Altova" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Department" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Office" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Person" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="join" library="core" uid="48863050" kind="32">
+					<properties/>
+					<view ltx="280" rbx="504" rby="548"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="tuple" ns="1" outkey="113" expanded="1">
+									<entry name="dynamic_tree_node0" ns="1" expanded="1">
+										<entry name="Office" inpkey="114" expanded="1">
+											<entry name="Name" type="attribute" outkey="115"/>
+											<entry name="Phone" type="attribute" outkey="116"/>
+										</entry>
+									</entry>
+									<entry name="dynamic_tree_node1" ns="1" expanded="1">
+										<entry name="Department" inpkey="152" expanded="1">
+											<entry name="Name" type="attribute" outkey="153"/>
+										</entry>
+									</entry>
+									<entry name="dynamic_tree_node2" ns="1" expanded="1">
+										<entry name="Person" inpkey="118" expanded="1">
+											<entry name="EMail" type="attribute" outkey="119"/>
+											<entry name="First" type="attribute" outkey="120"/>
+											<entry name="Last" type="attribute" outkey="121"/>
+											<entry name="PhoneExt" type="attribute" outkey="122"/>
+											<entry name="Title" type="attribute" outkey="123"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<join>
+							<joinkeys>
+								<keypair>
+									<first-key path-id="1"/>
+									<second-key path-id="2"/>
+								</keypair>
+								<keypair>
+									<first-key path-id="1" input-index="1"/>
+									<second-key path-id="2" input-index="2"/>
+								</keypair>
+							</joinkeys>
+							<keypaths>
+								<header>
+									<namespaces>
+										<namespace/>
+									</namespaces>
+								</header>
+								<entry>
+									<condition/>
+									<entry name="ForeignKey" type="attribute" outkey="2">
+										<condition/>
+									</entry>
+									<entry name="PrimaryKey" type="attribute" outkey="1">
+										<condition/>
+									</entry>
+								</entry>
+							</keypaths>
+						</join>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="146">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="154">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="155">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="113">
+						<edges>
+							<edge vertexkey="105" edgekey="131"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="115">
+						<edges>
+							<edge vertexkey="106" edgekey="132"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="116">
+						<edges>
+							<edge vertexkey="125" edgekey="133"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="119">
+						<edges>
+							<edge vertexkey="111" edgekey="135"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="120">
+						<edges>
+							<edge vertexkey="108" edgekey="136"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="121">
+						<edges>
+							<edge vertexkey="109" edgekey="137"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="122">
+						<edges>
+							<edge vertexkey="127" edgekey="138"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="123">
+						<edges>
+							<edge vertexkey="110" edgekey="139"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="124">
+						<edges>
+							<edge vertexkey="126" edgekey="140"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="128">
+						<edges>
+							<edge vertexkey="112" edgekey="148"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="144">
+						<edges>
+							<edge vertexkey="114" edgekey="146"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="150">
+						<edges>
+							<edge vertexkey="152" edgekey="155"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="151">
+						<edges>
+							<edge vertexkey="118" edgekey="154"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="153">
+						<edges>
+							<edge vertexkey="107" edgekey="156"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

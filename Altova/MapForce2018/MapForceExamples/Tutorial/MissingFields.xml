@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Articles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MissingFields.xsd">
+	<Article>		
+		<Name>T-Shirt</Name>
+		<SinglePrice>25</SinglePrice>
+		<Description>Available in all sizes</Description>
+	</Article>
+	<Article>
+		<Number>2</Number>		
+		<SinglePrice>2.30</SinglePrice>
+	</Article>
+	<Article>
+		<Number>3</Number>
+		<Name>Pants</Name>
+		<Description>Limited stock</Description>
+	</Article>
+	<Article>
+		<Number>4</Number>
+		<Name>Jacket</Name>
+		<SinglePrice>57.50</SinglePrice>
+	</Article>
+</Articles>

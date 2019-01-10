@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="23">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="now" library="lang" uid="9" kind="5">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="66"/>
+					</targets>
+					<view ltx="44" lty="140" rbx="93" rby="179"/>
+				</component>
+				<component name="datetime-add" library="lang" uid="24" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="111"/>
+						<datapoint pos="1" key="112"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="113"/>
+					</targets>
+					<view ltx="142" lty="367" rbx="231" rby="425"/>
+				</component>
+				<component name="constant" library="core" uid="25" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="104"/>
+					</targets>
+					<view ltx="28" lty="407" rbx="93" rby="425"/>
+					<data>
+						<constant value="P60D" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="30" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="125"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="126"/>
+					</targets>
+					<view ltx="259" lty="386" rbx="377" rby="425"/>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="32" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="129"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="130"/>
+					</targets>
+					<view ltx="259" lty="253" rbx="377" rby="292"/>
+				</component>
+				<component name="rfqs" library="xml" uid="13" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="178" lty="554" rbx="367" rby="612"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/RFQ"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Items" outkey="109" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="rfqs.xsd" inputinstance="items.xml" instanceroot="{http://www.altova.com/RFQ}Items"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="20" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="85"/>
+					</targets>
+					<view ltx="302" lty="347" rbx="406" rby="365"/>
+					<data>
+						<constant value="Nanonull, Inc." datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="26" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="110"/>
+					</targets>
+					<view ltx="293" lty="319" rbx="406" rby="337"/>
+					<data>
+						<constant value="Vernon Callaby" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="27" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="114"/>
+					</targets>
+					<view ltx="249" lty="460" rbx="406" rby="478"/>
+					<data>
+						<constant value="FCA Vereno Incoterms 2000" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="19" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="86"/>
+					</targets>
+					<view ltx="327" lty="494" rbx="406" rby="512"/>
+					<data>
+						<constant value="30 days" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="62"/>
+					</targets>
+					<view ltx="415" lty="47" rbx="453" rby="65"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="64"/>
+					</targets>
+					<view ltx="384" lty="82" rbx="453" rby="100"/>
+					<data>
+						<constant value="MFGB" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="65"/>
+					</targets>
+					<view ltx="404" lty="119" rbx="453" rby="137"/>
+					<data>
+						<constant value="ID" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="10" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="67"/>
+					</targets>
+					<view ltx="415" lty="175" rbx="471" rby="193"/>
+					<data>
+						<constant value="5346" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="79"/>
+					</targets>
+					<view ltx="404" lty="205" rbx="470" rby="223"/>
+					<data>
+						<constant value="DR01" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="83"/>
+					</targets>
+					<view ltx="420" lty="253" rbx="470" rby="271"/>
+					<data>
+						<constant value="423" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="MessageFramework_extended" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" TnsPrefix="msg" EnableMinMaxOccursOptimizations="0"/>
+					<view ltx="512" rbx="829" rby="505"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.nanonull.com/messaging"/>
+									<namespace uid="http://www.altova.com/RFQ"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Envelope" ns="1" expanded="1">
+										<entry name="Interchange" ns="1" expanded="1">
+											<entry name="Version" type="attribute" inpkey="61"/>
+											<entry name="InterchangeHeader" ns="1" expanded="1">
+												<entry name="Sender" type="attribute" inpkey="68"/>
+												<entry name="Receiver" type="attribute" inpkey="69"/>
+												<entry name="Date" type="attribute" inpkey="70"/>
+												<entry name="ControlNumber" type="attribute" inpkey="71"/>
+											</entry>
+											<entry name="Message" ns="1" expanded="1">
+												<entry name="Header" ns="1" expanded="1">
+													<entry name="Type" type="attribute" inpkey="76"/>
+													<entry name="Date" type="attribute" inpkey="77"/>
+													<entry name="ControlNumber" type="attribute" inpkey="78"/>
+												</entry>
+												<entry name="Body" ns="1" expanded="1">
+													<entry name="*">
+														<selections>
+															<qname QNameAsString="{http://www.altova.com/RFQ}requestForQuote"/>
+														</selections>
+													</entry>
+													<entry name="requestForQuote" ns="2" expanded="1">
+														<entry name="requestDate" inpkey="94"/>
+														<entry name="contact" inpkey="105"/>
+														<entry name="company" inpkey="95"/>
+														<entry name="bindingPeriod" inpkey="96"/>
+														<entry name="deliveryTerm" inpkey="106"/>
+														<entry name="paymentTerm" inpkey="107"/>
+														<entry name="Items" ns="2" inpkey="108" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="MessageFramework_extended.xsd" inputinstance="messages.xml" instanceroot="{http://www.nanonull.com/messaging}Envelope" sps="messageframework.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="115">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="61" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="64">
+						<edges>
+							<edge vertexkey="68" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="69" edgekey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="77" edgekey="80"/>
+							<edge vertexkey="111" edgekey="116"/>
+							<edge vertexkey="70" edgekey="131"/>
+							<edge vertexkey="129" edgekey="132"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="67">
+						<edges>
+							<edge vertexkey="71" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="76" edgekey="82"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83">
+						<edges>
+							<edge vertexkey="78" edgekey="84"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="85">
+						<edges>
+							<edge vertexkey="95" edgekey="99"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="86">
+						<edges>
+							<edge vertexkey="107" edgekey="117"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="104">
+						<edges>
+							<edge vertexkey="112" edgekey="118"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="108" edgekey="115"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="110">
+						<edges>
+							<edge vertexkey="105" edgekey="119"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113">
+						<edges>
+							<edge vertexkey="125" edgekey="133"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114">
+						<edges>
+							<edge vertexkey="106" edgekey="121"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="126">
+						<edges>
+							<edge vertexkey="96" edgekey="134"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="130">
+						<edges>
+							<edge vertexkey="94" edgekey="135"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

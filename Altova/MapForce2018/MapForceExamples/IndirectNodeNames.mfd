@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1">
+		<properties SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Quotations" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="763" rbx="1007" rby="210"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="People" ns="1" expanded="1">
+										<entry name="Person" ns="1" inpkey="18" expanded="1" use-generic-elements="1">
+											<entry name="element()" inpkey="19" expanded="1" show-schema-children="0">
+												<typeselections>
+													<type>
+														<entry name="text()" type="xml-type"/>
+													</type>
+												</typeselections>
+												<entry name="LocalName" inpkey="20"/>
+												<entry name="#text" type="xml-type" inpkey="21"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Quotations.xsd" instanceroot="{}People"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="GenericExport" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="273" rby="314"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace uid="http://www.w3.org/2001/XMLSchema"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="GENERIC_EXPORT" expanded="1">
+										<entry name="META" outkey="37"/>
+										<entry name="VALUES" expanded="1" use-generic-elements="1" show-schema-children="0">
+											<entry name="element()" ns="1" outkey="11" expanded="1" show-schema-children="0">
+												<typeselections>
+													<type>
+														<entry name="anyType" ns="http://www.w3.org/2001/XMLSchema" type="xml-type"/>
+													</type>
+												</typeselections>
+												<entry name="anyType" ns="2" type="xml-type" expanded="1" use-generic-elements="1">
+													<entry name="element()" ns="1" outkey="12" expanded="1" show-schema-children="0">
+														<typeselections>
+															<type>
+																<entry name="text()" type="xml-type"/>
+															</type>
+														</typeselections>
+														<entry name="LocalName" ns="1" outkey="13"/>
+														<entry name="#text" ns="1" type="xml-type" outkey="14"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="GenericExport.xsd" inputinstance="Quotations_NoSchema.xml" outputinstance="Quotations_NoSchema.xml" instanceroot="{}GENERIC_EXPORT"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="GetFieldName" library="user" uid="19" kind="19" visible="0">
+					<view ltx="392" rbx="659" rby="42"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="META" componentid="12" expanded="1">
+								<entry name="META" inpkey="38"/>
+							</entry>
+							<entry name="GenericFieldName" inpkey="39" componentid="13"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ElementName" outkey="40" componentid="11"/>
+						</root>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="41">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="18" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="19" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="39" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="21" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="38" edgekey="41"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="20" edgekey="43"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="GetFieldName" library="user" uid="10" editable="1">
+		<properties/>
+		<description/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="15" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="286" lty="282" rbx="352" rby="300"/>
+					<data>
+						<constant value="name" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="logical-and" library="core" uid="16" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="13"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="472" lty="146" rbx="551" rby="204"/>
+				</component>
+				<component name="equal" library="core" uid="18" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="379" lty="220" rbx="432" rby="276"/>
+				</component>
+				<component name="GenericFieldName" library="core" uid="13" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="28" lty="297" rbx="164" rby="336"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="GenericFieldName"/>
+					</data>
+				</component>
+				<component name="attribute()" library="core" uid="14" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="6"/>
+						<datapoint pos="1" key="10"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+						<datapoint/>
+					</targets>
+					<view ltx="606" lty="60" rbx="709" rby="116"/>
+				</component>
+				<component name="document" library="xml" uid="12" kind="14">
+					<properties/>
+					<view ltx="28" lty="3" rbx="221" rby="225"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace uid="http://www.w3.org/2001/XMLSchema"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="META" ns="2" expanded="1" use-generic-elements="1" show-schema-children="0">
+								<entry name="element()" expanded="1" show-schema-children="0">
+									<typeselections>
+										<type>
+											<entry name="anyType" ns="http://www.w3.org/2001/XMLSchema" type="xml-type"/>
+										</type>
+									</typeselections>
+									<entry name="LocalName" outkey="16"/>
+									<entry name="anyType" ns="1" type="xml-type" expanded="1" use-generic-attributes="1">
+										<entry name="attribute()" type="attribute" outkey="17" expanded="1">
+											<typeselections/>
+											<entry name="LocalName" outkey="18"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="GenericExport.xsd"/>
+						<wsdl/>
+						<parameter usageKind="input" name="META">
+							<root>
+								<entry name="GENERIC_EXPORT"/>
+								<entry name="META"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="17" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+						<datapoint pos="1" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="379" lty="148" rbx="432" rby="204"/>
+				</component>
+				<component name="ElementName" library="core" uid="11" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="15"/>
+					</sources>
+					<view ltx="750" lty="60" rbx="842" rby="99"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="ElementName"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="15" edgekey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="10" edgekey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="13" edgekey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="3" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="11" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="6" edgekey="26"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="1" edgekey="27"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

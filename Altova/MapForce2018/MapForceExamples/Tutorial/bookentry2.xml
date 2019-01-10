@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="books.xsd">
+	<book id="2">
+		<author>Franz Kafka</author>
+		<title>The Metamorphosis</title>
+		<category>Fiction</category>
+		<year>1912</year>
+	</book>
+</books>

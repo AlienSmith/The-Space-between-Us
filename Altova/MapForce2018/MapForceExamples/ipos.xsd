@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<!-- edited with XML Spy v4.0 NT beta 1 build Jun 13 2001 (http://www.xmlspy.com) by Alexander Falk (Altova, Inc.) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ipo="http://www.altova.com/IPO" targetNamespace="http://www.altova.com/IPO" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<include schemaLocation="ipo.xsd"/>
+	<element name="purchaseOrders">
+		<annotation>
+			<documentation>International purchase orders</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="ipo:purchaseOrder" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+			<attribute name="customer" type="string" use="required"/>
+		</complexType>
+	</element>
+</schema>

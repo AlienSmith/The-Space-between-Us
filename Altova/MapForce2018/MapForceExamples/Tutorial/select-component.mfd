@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources>
+		<datasources>
+			<datasource name="altova-products">
+				<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.mdb);" DBDataSource="altova-products.mdb" DBCatalog="altova-products" OLEDBProvider="Microsoft.Jet.OLEDB.4.0"/>
+				<database_connection database_kind="MS Access" import_kind="ADO" version="04.00.0000" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=altova-products.mdb" name="altova-products" path="altova-products" use_driver_for_retrieval="Yes" allow_background_retrieval="No">
+					<properties>
+						<property name="Database Kind" value="MS Access"/>
+						<property name="Import Kind" value="ADO"/>
+						<property name="Root Object" value="altova-products"/>
+						<property name="Data Source" value="altova-products.mdb"/>
+						<property name="Provider" value="Microsoft.Jet.OLEDB.4.0"/>
+						<property name="User ID"/>
+						<property name="Password"/>
+						<property name="Persist Security Info"/>
+						<property name="Jet OLEDB:System Database"/>
+						<property name="Jet OLEDB:Sandbox Mode"/>
+						<property name="Jet OLEDB:Exclusive Async Delay"/>
+						<property name="Jet OLEDB:Flush Transaction Timeout"/>
+						<property name="Jet OLEDB:Implicit Commit Sync"/>
+						<property name="Jet OLEDB:Lock Delay"/>
+						<property name="Jet OLEDB:Lock Retry"/>
+						<property name="Jet OLEDB:Max Buffer Size"/>
+						<property name="Jet OLEDB:Max Locks Per File"/>
+						<property name="Jet OLEDB:Page Locks to Table Lock"/>
+						<property name="Jet OLEDB:Page Timeout"/>
+						<property name="Jet OLEDB:Recycle Long-Valued Pages"/>
+						<property name="Jet OLEDB:Shared Async Delay"/>
+						<property name="Jet OLEDB:User Commit Sync"/>
+						<property name="Jet OLEDB:Compact Without Replica Repair"/>
+						<property name="Jet OLEDB:Create System Database"/>
+						<property name="Jet OLEDB:Database Locking Mode"/>
+						<property name="Jet OLEDB:Database Password"/>
+						<property name="Jet OLEDB:New Database Password"/>
+						<property name="Jet OLEDB:Registry Path"/>
+					</properties>
+					<LocalViewStorage>
+						<LocalViewElement SQL="SELECT *, (Quantity * UnitPrice) AS Price
+FROM Orders
+INNER JOIN Products
+ON Orders.ProductID = Products.ProductID
+WHERE Orders.Quantity &gt; :Quantity">
+							<PathElement Name="altova-products" Kind="DataSource"/>
+							<PathElement Name="altova-products" Kind="Database"/>
+							<PathElement Name="SELECT_Statement" Kind="Select Statement"/>
+							<Parameters>
+								<Parameter name="Quantity" type="MEMO" null="Yes">
+									<Properties Detected="true"/>
+								</Parameter>
+							</Parameters>
+						</LocalViewElement>
+					</LocalViewStorage>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="structure" library="db" uid="2" kind="15">
+					<properties/>
+					<view rbx="245" rby="61"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="SELECT_Statement" type="routine" outkey="1" expanded="1"/>
+							</entry>
+						</root>
+						<wsdl/>
+						<database ref="altova-products">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="altova-products" Kind="DataSource"/>
+										<PathElement Name="altova-products" Kind="Database"/>
+										<PathElement Name="SELECT_Statement" Kind="Select Statement"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="SELECT_Statement" library="db" uid="3" kind="28">
+					<properties/>
+					<view ltx="300" rbx="611" rby="219"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="procedure" inpkey="2" expanded="1"/>
+							<entry name="SELECT_Statement" displayselectionmode="selection"/>
+							<entry name="SELECT_Statement" expanded="1">
+								<condition>
+									<expression>
+										<function name="equal" library="core">
+											<expression>
+												<attribute name="input"/>
+											</expression>
+											<expression>
+												<constant value="true" datatype="boolean"/>
+											</expression>
+										</function>
+									</expression>
+								</condition>
+								<entry name="Quantity" type="attribute" inpkey="5"/>
+							</entry>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="SELECT_Statement" displayselectionmode="selection"/>
+							<entry name="SELECT_Statement" outkey="6" expanded="1">
+								<condition>
+									<expression>
+										<function name="equal" library="core">
+											<expression>
+												<attribute name="input"/>
+											</expression>
+											<expression>
+												<constant value="false" datatype="boolean"/>
+											</expression>
+										</function>
+									</expression>
+								</condition>
+								<entry name="SELECT_Statement" expanded="1">
+									<entry name="Price" type="attribute" outkey="7"/>
+									<entry name="OrderID" type="attribute" outkey="8"/>
+									<entry name="Orders.ProductID" type="attribute" outkey="9"/>
+									<entry name="OrderDate" type="attribute" outkey="10"/>
+									<entry name="Shipping" type="attribute" outkey="11"/>
+									<entry name="Quantity" type="attribute" outkey="12"/>
+									<entry name="ProductName" type="attribute" outkey="13"/>
+									<entry name="UnitPrice" type="attribute" outkey="14"/>
+									<entry name="UnitInStock" type="attribute" outkey="15"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<database/>
+					</data>
+				</component>
+				<component name="Text file" library="text" uid="5" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="812" rbx="984" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="18" expanded="1">
+										<entry name="Price" inpkey="19"/>
+										<entry name="OrderID" inpkey="20"/>
+										<entry name="ProductID" inpkey="21"/>
+										<entry name="OrderDate" inpkey="22"/>
+										<entry name="Shipping" inpkey="23"/>
+										<entry name="Quantity" inpkey="24"/>
+										<entry name="ProductName" inpkey="25"/>
+										<entry name="UnitPrice" inpkey="26"/>
+										<entry name="UnitInStock" inpkey="27"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" outputinstance="OrdersReport" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Price" type="string"/>
+									<field1 name="OrderID" type="string"/>
+									<field2 name="ProductID" type="string"/>
+									<field3 name="OrderDate" type="string"/>
+									<field4 name="Shipping" type="string"/>
+									<field5 name="Quantity" type="string"/>
+									<field6 name="ProductName" type="string"/>
+									<field7 name="UnitPrice" type="string"/>
+									<field8 name="UnitInStock" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="Quantity" library="core" uid="4" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="166" lty="96" rbx="255" rby="135"/>
+					<data>
+						<input datatype="string" previewvalue="2" usepreviewvalue="1"/>
+						<wsdl/>
+						<parameter usageKind="input" name="Quantity"/>
+					</data>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="9" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="16"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="663" lty="239" rbx="781" rby="278"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="18" edgekey="29"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="19" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="20" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="21" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="16" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="23" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="24" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="25" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="26" edgekey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="27" edgekey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="22" edgekey="39"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

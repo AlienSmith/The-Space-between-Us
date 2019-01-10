@@ -1,0 +1,32 @@
+O00001Nanonull, Inc.           +1 (321) 555 5155        +1 (321) 555 5155 - 9    
+A00001CAVereno              29213119 Oakstreet, Suite 4876
+D00001Administration           
+P00001Callaby        Vernon         582Office Manager           v.callaby@nanonull.com   
+P00002Further        Frank          471Accounts Receivable      f.further@nanonull.com   
+P00003Matise         Loby           963Accounting Manager       l.matise@nanonull.com    
+D00002Marketing                
+P00004Firstbread     Joe            621Marketing Manager Europe j.firstbread@nanonull.com
+P00005Sanna          Susi           753Art Director             s.sanna@nanonull.com     
+D00003Engineering              
+P00006Landis         Fred           951Program Manager          f.landis@nanonull.com    
+P00007Butler         Michelle       654Software Engineer        m.landis@nanonull.com    
+P00008Little         Ted            852Software Engineer        t.little@nanonull.com    
+P00009Way            Ann            951Technical Writer         a.way@nanonull.com       
+P00010Gardner        Liz            753Software Engineer        l.gardner@nanonull.com   
+P00011Smith          Paul           334Software Engineer        p.smith@nanonull.com     
+D00004IT & Technical Support   
+P00012Martin         Alex           778IT Manager               a.martin@nanonull.com    
+P00013Hammer         George         223Web Developer            g.hammer@nanonull.com    
+P00014Bander         Jessica        241Support Engineer         j.band@nanonull.com      
+P00015King           Lui            345Support Engineer         l.king@nanonull.com      
+O00002Nanonull Partners, Inc.  +1 (927) 555 0094        +1 (927) 555 1845        
+A00002MABrenton             5985 9865 Millenium Center, Su
+D00005Administration           
+P00016Meier          Steve          114Office Manager           s.meier@nanonull.com     
+P00017Bone           Theo           331Accounts Receivable      t.bone@nanonull.com      
+D00006Marketing                
+P00018Nafta          Max            122PR & Marketing Manager USm.nafta@nanonull.com     
+D00007IT & Technical Support   
+P00019Bass           Valentin       716IT Manager               v.bass@nanonull.com      
+P00020Franken        Carl           147Support Engineer         c.franken@nanonull.com   
+P00021Redgreen       Mark           152Support Engineer         m.redgreen@nanonull.com  

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="28">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="7" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="534" lty="615" rbx="580" rby="633"/>
+					<data>
+						<constant value=", " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="substring-after" library="core" uid="6" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="25"/>
+						<datapoint pos="1" key="26"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="27"/>
+					</targets>
+					<view ltx="615" lty="564" rbx="715" rby="620"/>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="31"/>
+					</targets>
+					<view ltx="615" lty="490" rbx="708" rby="508"/>
+					<data>
+						<constant value="[D] [Mn] [Y]" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="parse-date" library="core" uid="4" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="28"/>
+						<datapoint pos="1" key="29"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="30"/>
+					</targets>
+					<view ltx="736" lty="452" rbx="816" rby="508"/>
+				</component>
+				<component name="GET http://blog.altova.com/feed/" library="webservice" uid="2" kind="20">
+					<properties WSDLService="{}" WSDLPort="{}" WSDLOperation="{}"/>
+					<view rbx="567" rby="572"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="HTTPMessage" expanded="1">
+								<entry name="HTTPBody" expanded="1"/>
+							</entry>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="HTTPMessage" ns="1" expanded="1">
+								<entry name="HTTPHeader" ns="1">
+									<entry name="name" expanded="1"/>
+								</entry>
+								<entry name="HTTPBody" ns="1" expanded="1">
+									<entry name="document" ns="1" type="doc-xml" expanded="1" casttotargettypemode="cast-in-subtree">
+										<document schemafile="rss-2_0.xsd" root="rss" encoding="UTF-8" enableMinMaxOccursOptimizations="0" writeXMLDeclaration="0"/>
+										<entry name="rss" expanded="1">
+											<entry name="channel" outkey="38" expanded="1">
+												<entry name="title" outkey="18"/>
+												<entry name="item" outkey="5" expanded="1">
+													<entry name="title" outkey="6"/>
+													<entry name="link" outkey="7"/>
+													<entry name="pubDate" outkey="8"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="call" sourceMode="manual" url="http://blog.altova.com/feed/" timeout="40" httpmethod="GET"/>
+					</data>
+				</component>
+				<component name="Excel file" library="xlsx" uid="3" kind="26">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="826" rbx="1073" rby="271"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Workbook" expanded="1">
+										<entry name="Worksheet" inpkey="37" expanded="1">
+											<ranges>
+												<range id="1" start="1"/>
+											</ranges>
+											<entry name="Name" type="attribute" inpkey="13"/>
+											<entry name="Row" expanded="1" displayselectionmode="selection">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+											<entry name="Row" inpkey="14" expanded="1" enabletitlerow="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" displayselectionmode="selection" datatype="string"/>
+												<entry name="Cell" inpkey="15" annotation="Date" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="1" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="16" annotation="Title" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="2" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="17" annotation="Link" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="3" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<excel/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="14" edgekey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="16" edgekey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="17" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="25" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="13" edgekey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="26" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="28" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="15" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="29" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="37" edgekey="39"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

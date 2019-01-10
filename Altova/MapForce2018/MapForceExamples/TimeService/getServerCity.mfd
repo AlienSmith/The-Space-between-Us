@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="10">
+	<component name="defaultmap1" blackbox="0" uid="95142968" editable="1">
+		<properties SelectedLanguage="java" WSDLFile="TimeService.wsdl" WSDLService="{http://www.Nanonull.com/TimeService/}TimeService" WSDLPort="TimeServiceSoap" WSDLOperation="{http://www.Nanonull.com/TimeService/}getServerCity"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="95757472" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="150133960"/>
+					</targets>
+					<view ltx="398" lty="178" rbx="-98" rby="-16"/>
+					<data>
+						<constant value="Boston" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="wsdl" library="wsdl" uid="96083312" kind="17" visible="0">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="548" lty="100" rbx="792" rby="176"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="getServerCitySoapOut" expanded="1">
+								<entry name="parameters" ns="1" inpkey="150162840" expanded="1">
+									<entry name="getServerCityResult" inpkey="150162568"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="output"/>
+					</data>
+				</component>
+				<component name="wsdl" library="wsdl" uid="95578256" kind="17" visible="0">
+					<view ltx="100" lty="100" rbx="323" rby="172"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+								</namespaces>
+							</header>
+							<entry name="getServerCitySoapIn" ns="1" expanded="1">
+								<entry name="parameters" outkey="150185200"/>
+							</entry>
+						</root>
+						<wsdl previewRequestInstanceFile="getServerCityRequest.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="150133960">
+						<edges>
+							<edge vertexkey="150162568" edgekey="150191024"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="150185200">
+						<edges>
+							<edge vertexkey="150162840" edgekey="150191320"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns="http://my-company.com/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://my-company.com/namespace" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Order">
+		<xs:annotation>
+			<xs:documentation>Root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Header" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Header">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RecordType" type="xs:string"/>
+				<xs:element name="OrderNo" type="xs:integer"/>
+				<xs:element name="TotalWeight" type="xs:decimal"/>
+				<xs:element name="TotalUnitCost" type="xs:decimal"/>
+				<xs:element name="Currency" type="xs:string"/>
+				<xs:element name="Shipping-details" type="xs:string"/>
+				<xs:element name="Detail" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RecordType" type="xs:string"/>
+							<xs:element name="OrderNo" type="xs:integer"/>
+							<xs:element name="ProductNo" type="xs:string"/>
+							<xs:element name="UnitWeight" type="xs:decimal"/>
+							<xs:element name="UnitNo" type="xs:string"/>
+							<xs:element name="UnitCost" type="xs:string"/>
+							<xs:element name="Unit-description" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

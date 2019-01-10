@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="10">
+	<component name="defaultmap1" blackbox="0" uid="94016672" editable="1">
+		<properties ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="java" WSDLFile="TimeService.wsdl" WSDLService="{http://www.Nanonull.com/TimeService/}TimeService" WSDLPort="TimeServiceSoap" WSDLOperation="{http://www.Nanonull.com/TimeService/}getServerTimeZone"/>
+		<structure>
+			<children>
+				<component name="wsdl" library="wsdl" uid="95268200" kind="17" visible="0">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="485" lty="100" rbx="759" rby="172"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="getServerTimeZoneSoapOut" expanded="1">
+								<entry name="parameters" ns="1" inpkey="174050624" expanded="1">
+									<entry name="getServerTimeZoneResult" inpkey="174057536"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="output"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="95389640" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="174048544"/>
+					</targets>
+					<view ltx="387" lty="163" rbx="-109" rby="-31"/>
+					<data>
+						<constant value="UTC" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="wsdl" library="wsdl" uid="94759272" kind="17" visible="0">
+					<view ltx="100" lty="100" rbx="351" rby="162"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+								</namespaces>
+							</header>
+							<entry name="getServerTimeZoneSoapIn" ns="1" expanded="1">
+								<entry name="parameters" outkey="174076944"/>
+							</entry>
+						</root>
+						<wsdl previewRequestInstanceFile="getServerTimeZoneRequest.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="174048544">
+						<edges>
+							<edge vertexkey="174057536" edgekey="174080360"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="174076944">
+						<edges>
+							<edge vertexkey="174050624" edgekey="174080656"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

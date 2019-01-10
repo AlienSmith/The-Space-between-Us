@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties SelectedLanguage="java" WSDLFile="TimeService20.wsdl" WSDLService="{http://www.Nanonull.com/TimeService/}TimeService" WSDLPort="TimeServiceSoap" WSDLOperation="{http://www.Nanonull.com/TimeService/}getCityTime"/>
+		<structure>
+			<children>
+				<component name="n0:getCityTime" library="core" uid="5" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="202613528"/>
+						<datapoint pos="1" key="202614344"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="202614776"/>
+						<datapoint pos="1" key="202615208"/>
+					</targets>
+					<view ltx="313" lty="96" rbx="-136" rby="-208"/>
+				</component>
+				<component name="equal" library="core" uid="6" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="202630224"/>
+						<datapoint pos="1" key="202630952"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="202631384"/>
+					</targets>
+					<view ltx="231" lty="166" rbx="-92" rby="-37"/>
+				</component>
+				<component name="now" library="lang" uid="3" kind="5">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="202364816"/>
+					</targets>
+					<view ltx="355" lty="187" rbx="-78" rby="-12"/>
+				</component>
+				<component name="constant" library="core" uid="4" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="202364200"/>
+					</targets>
+					<view ltx="261" lty="247" rbx="-191" rby="23"/>
+					<data>
+						<constant value="City not implemented..." datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="wsdl" library="wsdl" uid="2" kind="17" visible="0">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="494" lty="89" rbx="669" rby="131"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+								</namespaces>
+							</header>
+							<entry name="getCityTime" expanded="1">
+								<entry name="getCityTimeResponse" inpkey="186943888" expanded="1">
+									<entry name="getCityTimeResult" inpkey="186942824"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="output"/>
+					</data>
+				</component>
+				<component name="WSDL" library="wsdl" uid="8" kind="17">
+					<properties/>
+					<view ltx="496" lty="158" rbx="669" rby="215"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+								</namespaces>
+							</header>
+							<entry name="getCityTime" expanded="1">
+								<entry name="errorResponse" inpkey="202741904" expanded="1">
+									<entry name="errorText" inpkey="202684768"/>
+									<entry name="errorItem" inpkey="202709960"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="fault" faultName="{http://www.Nanonull.com/TimeService/}FaultCityNotFound"/>
+					</data>
+				</component>
+				<component name="wsdl" library="wsdl" uid="1" kind="17" visible="0">
+					<view ltx="48" lty="77" rbx="189" rby="142"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+								</namespaces>
+							</header>
+							<entry name="getCityTime" expanded="1">
+								<entry name="getCityTime" outkey="202383376" expanded="1">
+									<entry name="city" outkey="173408072"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl previewRequestInstanceFile="getCityTimeRequest.xml"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="202540672"/>
+					</targets>
+					<view ltx="119" lty="207" rbx="-81" rby="-156"/>
+					<data>
+						<constant value="Boston" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="173408072">
+						<edges>
+							<edge vertexkey="202630224" edgekey="184182472"/>
+							<edge vertexkey="202709960" edgekey="202442360"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="202364200">
+						<edges>
+							<edge vertexkey="202684768" edgekey="202653464"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="202364816">
+						<edges>
+							<edge vertexkey="186942824" edgekey="184155112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="202383376">
+						<edges>
+							<edge vertexkey="202613528" edgekey="202355928"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="202540672">
+						<edges>
+							<edge vertexkey="202630952" edgekey="202546280"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="202614776">
+						<edges>
+							<edge vertexkey="186943888" edgekey="184156528"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="202615208">
+						<edges>
+							<edge vertexkey="202741904" edgekey="161113960"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="202631384">
+						<edges>
+							<edge vertexkey="202614344" edgekey="202544248"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

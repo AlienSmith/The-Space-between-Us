@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="date-from-datetime" library="lang" uid="8" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="64"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="65"/>
+					</targets>
+					<view ltx="766" lty="211" rbx="884" rby="250"/>
+				</component>
+				<component name="datetime-add" library="lang" uid="5" kind="5" growable="1" growablebasename="duration">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="4"/>
+						<datapoint pos="1" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="635" lty="211" rbx="724" rby="269"/>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="7" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="62"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="63"/>
+					</targets>
+					<view ltx="766" lty="161" rbx="884" rby="200"/>
+				</component>
+				<component name="constant" library="core" uid="4" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="541" lty="251" rbx="596" rby="269"/>
+					<data>
+						<constant value="-P1D" datatype="anySimpleType"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Excel file" library="xlsx" uid="6" kind="26">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="968" lty="92" rbx="1264" rby="357"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Workbook" expanded="1">
+										<entry name="Worksheet" expanded="1" displayselectionmode="selection">
+											<ranges/>
+											<entry name="Row" expanded="1">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+										</entry>
+										<entry name="Worksheet" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal-ignorecase" library="xlsx">
+														<expression>
+															<attribute name="Name"/>
+														</expression>
+														<expression>
+															<constant value="Operating Expenses"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<ranges>
+												<range id="1" start="1"/>
+											</ranges>
+											<entry name="Row" expanded="1" displayselectionmode="selection">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+											<entry name="Row" inpkey="40" expanded="1" enabletitlerow="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" displayselectionmode="selection" datatype="string"/>
+												<entry name="Cell" inpkey="41" annotation="Start Date" datatype="date">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="1" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="d"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="42" annotation="End Date" datatype="date">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="2" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="d"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="43" annotation="Commissions, transportation and other" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="3" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="44" annotation="Onboard and other" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="4" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="45" annotation="Payroll and related" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="5" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="46" annotation="Fuel" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="6" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="47" annotation="Food" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="7" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="48" annotation="Other ship operating" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="8" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="49" annotation="Tour and other" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="9" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="50" annotation="Total" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="10" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<excel/>
+					</data>
+				</component>
+				<component name="nanonull" library="xbrl" uid="2" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" XBRLShowLinkRoleViews="0" XBRLShowTableLinkbase="1"/>
+					<view rbx="495" rby="696"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://www.altova.com/nanonull"/>
+									<namespace uid="http://fasb.org/us-gaap/2013-01-31"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="4" expanded="1">
+								<entry name="document" ns="4" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="1" expanded="1" showdefaultsnode="1">
+										<entry name="nanonull_tab.xml#table_091_segment_revenue" expanded="1">
+											<dimensions>
+												<qname name="nanonull_tab.xml#breakdown3"/>
+												<qname name="nanonull_tab.xml#breakdown7"/>
+											</dimensions>
+											<entry name="tableset" displayselectionmode="selection"/>
+											<entry name="tableset">
+												<condition>
+													<expression>
+														<function name="is-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+											</entry>
+										</entry>
+										<entry name="nanonull_tab.xml#table_103_income" expanded="1">
+											<dimensions>
+												<qname name="nanonull_tab.xml#breakdown"/>
+												<qname name="nanonull_tab.xml#breakdown2"/>
+											</dimensions>
+											<entry name="tableset" displayselectionmode="selection"/>
+											<entry name="tableset" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="table1" expanded="1">
+													<entry name="nanonull_tab.xml#breakdown" expanded="1">
+														<entry name="nanonull_tab.xml#aspectNode" expanded="1">
+															<entry name="period" ns="1" outkey="5" expanded="1">
+																<entry name="startDate" ns="1" outkey="6"/>
+																<entry name="endDate" ns="1" outkey="7"/>
+															</entry>
+															<entry name="nanonull_tab.xml#breakdown2" expanded="1">
+																<entry name="nanonull_tab.xml#conceptRelationshipNode1" expanded="1">
+																	<entry name="CostsAndExpensesAbstract" ns="3" expanded="1">
+																		<entry name="OperatingExpensesAbstract" ns="3" expanded="1">
+																			<entry name="CostOfRevenueAbstract" ns="3" expanded="1">
+																				<entry name="CruiseCommissionsTransportationAndOther" ns="2" outkey="8"/>
+																				<entry name="CostOfOnboardAndOther" ns="2" outkey="9"/>
+																				<entry name="CostOfServicesDirectLabor" ns="3" outkey="10"/>
+																				<entry name="FuelCosts" ns="3" outkey="11"/>
+																				<entry name="FoodAndBeverageCostOfSales" ns="3" outkey="12"/>
+																				<entry name="OtherCostAndExpenseOperating" ns="3" outkey="13"/>
+																			</entry>
+																			<entry name="OtherCostOfOperatingRevenue" ns="3" outkey="14"/>
+																			<entry name="CostOfRevenue" ns="3" outkey="15"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="nanonull_tab.xml#table_104_balance" expanded="1">
+											<dimensions>
+												<qname name="nanonull_tab.xml#breakdown4"/>
+												<qname name="nanonull_tab.xml#breakdown5"/>
+											</dimensions>
+											<entry name="tableset" displayselectionmode="selection"/>
+											<entry name="tableset">
+												<condition>
+													<expression>
+														<function name="is-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+											</entry>
+										</entry>
+										<entry name="nanonull_tab.xml#table_105_balance_parenthetical" expanded="1">
+											<dimensions>
+												<qname name="nanonull_tab.xml#breakdown4"/>
+												<qname name="nanonull_tab.xml#breakdown6"/>
+											</dimensions>
+											<entry name="tableset" displayselectionmode="selection"/>
+											<entry name="tableset">
+												<condition>
+													<expression>
+														<function name="is-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+											</entry>
+										</entry>
+										<entry name="nanonull_tab.xml#table_106_cashflow" expanded="1">
+											<dimensions>
+												<qname name="nanonull_tab.xml#breakdown3"/>
+												<qname name="nanonull_tab.xml#breakdown1"/>
+											</dimensions>
+											<entry name="tableset" displayselectionmode="selection"/>
+											<entry name="tableset">
+												<condition>
+													<expression>
+														<function name="is-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<xbrl schema="Taxonomy\nanonull.xsd" inputinstance="nanonull.xbrl"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="64" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="3" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="40" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="62" edgekey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="4" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="43" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="44" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="45" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="46" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="47" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="48" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="49" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="50" edgekey="61"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="41" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="42" edgekey="69"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

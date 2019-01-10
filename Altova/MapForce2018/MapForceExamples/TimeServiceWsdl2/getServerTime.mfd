@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties SelectedLanguage="java" WSDLFile="TimeService20.wsdl" WSDLService="{http://www.Nanonull.com/TimeService/}TimeService" WSDLPort="TimeServiceSoap" WSDLOperation="{http://www.Nanonull.com/TimeService/}getServerTime"/>
+		<structure>
+			<children>
+				<component name="wsdl" library="wsdl" uid="2" kind="17" visible="0">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="467" lty="88" rbx="686" rby="133"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+								</namespaces>
+							</header>
+							<entry name="getServerTime" expanded="1">
+								<entry name="getServerTimeResponse" inpkey="183963328" expanded="1">
+									<entry name="getServerTimeResult" inpkey="208229704"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="output"/>
+					</data>
+				</component>
+				<component name="now" library="lang" uid="3" kind="5">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="210385792"/>
+					</targets>
+					<view ltx="323" lty="142" rbx="-8" rby="30"/>
+				</component>
+				<component name="wsdl" library="wsdl" uid="1" kind="17" visible="0">
+					<view ltx="93" lty="85" rbx="275" rby="129"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+								</namespaces>
+							</header>
+							<entry name="getServerTime" expanded="1">
+								<entry name="getServerTime" outkey="181435832"/>
+							</entry>
+						</root>
+						<wsdl previewRequestInstanceFile="getServerTimeRequest.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="181435832">
+						<edges>
+							<edge vertexkey="183963328" edgekey="207736688"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="210385792">
+						<edges>
+							<edge vertexkey="208229704" edgekey="186878304"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

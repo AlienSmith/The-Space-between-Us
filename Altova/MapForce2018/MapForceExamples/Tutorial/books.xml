@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="books.xsd">
+	<book id="1">
+		<author>Mark Twain</author>
+		<title>The Adventures of Tom Sawyer</title>
+		<category>Fiction</category>
+		<year>1876</year>
+	</book>
+	<book id="2">
+		<author>Franz Kafka</author>
+		<title>The Metamorphosis</title>
+		<category>Fiction</category>
+		<year>1912</year>
+	</book>
+	<book id="3">
+		<author>Herman Melville</author>
+		<title>Moby Dick</title>
+		<category>Fiction</category>
+		<year>1851</year>
+	</book>
+	<book id="4">
+		<author>Miguel de Cervantes</author>
+		<title>Don Quixote</title>
+		<category>Fiction</category>
+		<year>1605</year>
+	</book>
+</books>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="26">
+	<resources>
+		<datasources>
+			<datasource name="dbresources">
+				<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:dbresources.db" DBDataSource="dbresources.db"/>
+				<database_connection database_kind="SQLite" import_kind="SQLite" version="3.8" ConnectionString="dbresources.db" name="dbresources" path="dbresources" allow_background_retrieval="No">
+					<properties>
+						<property name="Database Kind" value="SQLite"/>
+						<property name="Import Kind" value="SQLite"/>
+						<property name="Root Object" value="main"/>
+						<property name="Data Source" value="dbresources.db"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="Text file" library="text" uid="3" kind="16">
+					<properties/>
+					<view ltx="230" lty="69" rbx="380" rby="269"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" inpkey="47" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" outkey="15" expanded="1">
+										<entry name="ID" outkey="16"/>
+										<entry name="Last" outkey="17"/>
+										<entry name="First" outkey="18"/>
+										<entry name="Phone" outkey="37"/>
+										<entry name="Title" outkey="38"/>
+										<entry name="Email" outkey="39"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="flf" encoding="1000" byteorder="1" byteordermark="0">
+							<settings delimiter="true" fillchar=" " removeempty="false">
+								<names root="Text file" block="Rows">
+									<field0 name="ID" type="string" length="6"/>
+									<field1 name="Last" type="string" length="15"/>
+									<field2 name="First" type="string" length="15"/>
+									<field3 name="Phone" type="integer" length="3"/>
+									<field4 name="Title" type="string" length="25"/>
+									<field5 name="Email" type="string" length="25"/>
+								</names>
+							</settings>
+						</text>
+						<parameter usageKind="stringparse"/>
+					</data>
+				</component>
+				<component name="Excel file" library="xlsx" uid="16" kind="26">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="476" lty="35" rbx="776" rby="235"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Workbook" expanded="1">
+										<entry name="Worksheet" expanded="1" displayselectionmode="selection">
+											<ranges/>
+											<entry name="Row" expanded="1">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+										</entry>
+										<entry name="Worksheet" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal-ignorecase" library="xlsx">
+														<expression>
+															<attribute name="Name"/>
+														</expression>
+														<expression>
+															<constant value="Sheet1"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<ranges>
+												<range id="1" start="1"/>
+											</ranges>
+											<entry name="Row" expanded="1" displayselectionmode="selection">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+											<entry name="Row" inpkey="30" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" displayselectionmode="selection" datatype="string"/>
+												<entry name="Cell" inpkey="31" annotation="ID" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="1" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="32" annotation="Last" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="2" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="33" annotation="First" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="3" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="34" annotation="Phone" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="4" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="35" annotation="Phone" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="5" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" inpkey="36" annotation="Email" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="6" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<excel/>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="17" kind="15">
+					<properties/>
+					<view ltx="8" lty="4" rbx="158" rby="204"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="resources" type="table" expanded="1">
+									<entry name="resource" outkey="48"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<database ref="dbresources">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="dbresources" Kind="DataSource"/>
+										<PathElement Name="main" Kind="Database"/>
+										<PathElement Name="resources" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="30" edgekey="40"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="31" edgekey="41"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="32" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="33" edgekey="43"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="34" edgekey="44"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="35" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="36" edgekey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="47" edgekey="49"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

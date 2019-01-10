@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="25" editable="1">
+		<properties SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Cells" library="core" uid="79" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="313"/>
+						<datapoint pos="1" key="314"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="325"/>
+						<datapoint/>
+					</targets>
+					<view ltx="521" lty="114" rbx="624" rby="170"/>
+				</component>
+				<component name="item-at" library="core" uid="90" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="368"/>
+						<datapoint pos="1" key="370"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="369"/>
+					</targets>
+					<view ltx="521" lty="238" rbx="623" rby="294"/>
+				</component>
+				<component name="constant" library="core" uid="97" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="405"/>
+					</targets>
+					<view ltx="453" lty="292" rbx="491" rby="310"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="not-equal" library="core" uid="83" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="322"/>
+						<datapoint pos="1" key="323"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="324"/>
+					</targets>
+					<view ltx="390" lty="182" rbx="462" rby="238"/>
+				</component>
+				<component name="constant" library="core" uid="78" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="289"/>
+					</targets>
+					<view ltx="326" lty="220" rbx="364" rby="238"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="SalesByRegionAndMonth" library="xlsx" uid="1" kind="26">
+					<properties/>
+					<view ltx="14" lty="71" rbx="210" rby="361"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Workbook" expanded="1">
+										<entry name="Worksheet" expanded="1" displayselectionmode="selection">
+											<ranges/>
+											<entry name="Row" expanded="1">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+										</entry>
+										<entry name="Worksheet" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal-ignorecase" library="xlsx">
+														<expression>
+															<attribute name="Name"/>
+														</expression>
+														<expression>
+															<constant value="Sales"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<ranges>
+												<range id="1" start="1" count="1"/>
+												<range id="2" start="2"/>
+												<range id="3" start="1" count="1"/>
+											</ranges>
+											<entry name="Row" expanded="1" displayselectionmode="selection">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="3" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" displayselectionmode="selection" datatype="string"/>
+												<entry name="Cell" outkey="423" annotation="Year" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="1" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" outkey="355" expanded="1" datatype="string">
+													<entry name="n" type="attribute" outkey="437"/>
+												</entry>
+											</entry>
+											<entry name="Row" outkey="374" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="2" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" outkey="356" expanded="1" datatype="string">
+													<entry name="n" type="attribute" outkey="431"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<excel inputinstance="SalesByRegionAndMonth.xlsx"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="113" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="428"/>
+						<datapoint pos="1" key="429"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="430"/>
+					</targets>
+					<view ltx="420" lty="366" rbx="473" rby="422"/>
+				</component>
+				<component name="Cells" library="core" uid="112" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="425"/>
+						<datapoint pos="1" key="426"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="427"/>
+						<datapoint/>
+					</targets>
+					<view ltx="521" lty="328" rbx="624" rby="384"/>
+				</component>
+				<component name="value-map" library="core" uid="85" kind="23">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="343"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="344"/>
+					</targets>
+					<view ltx="270" lty="36" rbx="415" rby="75"/>
+					<data>
+						<wsdl/>
+						<valuemap>
+							<valuemapTable>
+								<entry from="January" to="1"/>
+								<entry from="February" to="2"/>
+								<entry from="March" to="3"/>
+								<entry from="April" to="4"/>
+								<entry from="May" to="5"/>
+								<entry from="June" to="6"/>
+								<entry from="July" to="7"/>
+								<entry from="August" to="8"/>
+								<entry from="September" to="9"/>
+								<entry from="October" to="10"/>
+								<entry from="November" to="11"/>
+								<entry from="December" to="12"/>
+							</valuemapTable>
+							<input name="month-name" type="string"/>
+							<result name="month-number" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="first-and-last-of-month" library="user" blackbox="0" uid="106" kind="19" visible="0">
+					<view ltx="520" lty="8" rbx="648" rby="42"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="year" inpkey="414" componentid="103"/>
+							<entry name="month" inpkey="415" componentid="104"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="startdate" outkey="416" componentid="105"/>
+							<entry name="enddate" outkey="421" componentid="111"/>
+						</root>
+					</data>
+				</component>
+				<component name="sales-report" library="xml" uid="84" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="728" lty="71" rbx="887" rby="271"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="sales-report" expanded="1">
+										<entry name="period" inpkey="330" expanded="1">
+											<entry name="start-date" type="attribute" inpkey="331"/>
+											<entry name="end-date" type="attribute" inpkey="420"/>
+											<entry name="region-sales" inpkey="375" expanded="1">
+												<entry name="regioncode" type="attribute" inpkey="376"/>
+												<entry name="amount" type="attribute" inpkey="377" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="sales-report.xsd" instanceroot="{}sales-report" sps="sales-report.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="289">
+						<edges>
+							<edge vertexkey="323" edgekey="409"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="324">
+						<edges>
+							<edge vertexkey="314" edgekey="328"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="325">
+						<edges>
+							<edge vertexkey="330" edgekey="349"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="344">
+						<edges>
+							<edge vertexkey="415" edgekey="418"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="355">
+						<edges>
+							<edge vertexkey="343" edgekey="361"/>
+							<edge vertexkey="313" edgekey="362"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="356">
+						<edges>
+							<edge vertexkey="368" edgekey="383"/>
+							<edge vertexkey="425" edgekey="433"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="369">
+						<edges>
+							<edge vertexkey="376" edgekey="410"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="374">
+						<edges>
+							<edge vertexkey="375" edgekey="411"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="405">
+						<edges>
+							<edge vertexkey="370" edgekey="406"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="416">
+						<edges>
+							<edge vertexkey="331" edgekey="419"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="421">
+						<edges>
+							<edge vertexkey="420" edgekey="422"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="423">
+						<edges>
+							<edge vertexkey="414" edgekey="424"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="427">
+						<edges>
+							<edge vertexkey="377" edgekey="434"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="430">
+						<edges>
+							<edge vertexkey="426" edgekey="435"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="431">
+						<edges>
+							<edge vertexkey="429" edgekey="436"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="437">
+						<edges>
+							<edge vertexkey="428" edgekey="438"/>
+							<edge vertexkey="322" edgekey="439"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="first-and-last-of-month" library="user" blackbox="0" uid="99" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="year" library="core" uid="103" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view rbx="72" rby="39"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="year"/>
+					</data>
+				</component>
+				<component name="month" library="core" uid="104" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view lty="50" rbx="78" rby="89"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="month"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="109" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="362" lty="257" rbx="425" rby="275"/>
+					<data>
+						<constant value="-P1D" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="datetime-from-parts" library="lang" uid="102" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="4"/>
+						<datapoint pos="1" key="5"/>
+						<datapoint pos="2" key="7"/>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="166" lty="26" rbx="288" rby="184"/>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="101" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="331" lty="85" rbx="449" rby="124"/>
+				</component>
+				<component name="datetime-add" library="lang" uid="107" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="23"/>
+						<datapoint pos="1" key="19"/>
+						<datapoint pos="2" key="20"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="519" lty="180" rbx="608" rby="256"/>
+				</component>
+				<component name="constant" library="core" uid="110" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="365" lty="224" rbx="425" rby="242"/>
+					<data>
+						<constant value="P1M" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="enddate" library="core" uid="111" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="16"/>
+					</sources>
+					<view ltx="670" lty="191" rbx="737" rby="230"/>
+					<data>
+						<output datatype="date"/>
+						<wsdl/>
+						<parameter usageKind="output" name="enddate"/>
+					</data>
+				</component>
+				<component name="startdate" library="core" uid="105" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="10"/>
+					</sources>
+					<view ltx="670" lty="85" rbx="741" rby="124"/>
+					<data>
+						<output datatype="date"/>
+						<wsdl/>
+						<parameter usageKind="output" name="startdate"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="100" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="86" lty="106" rbx="124" rby="124"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="10" edgekey="11"/>
+							<edge vertexkey="23" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="3" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="7" edgekey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="4" edgekey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="5" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="19" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="20" edgekey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="16" edgekey="26"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="concat" library="core" uid="13" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="10"/>
+						<datapoint pos="1" key="11"/>
+						<datapoint pos="2" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="538" lty="344" rbx="623" rby="420"/>
+				</component>
+				<component name="constant" library="core" uid="16" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="21"/>
+					</targets>
+					<view ltx="612" lty="438" rbx="684" rby="456"/>
+					<data>
+						<constant value="Details" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="442" lty="392" rbx="485" rby="410"/>
+					<data>
+						<constant value=" " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Person2Details" library="user" blackbox="0" uid="27" kind="19" visible="0">
+					<view ltx="463" lty="474" rbx="643" rby="525"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Title" inpkey="38" componentid="23"/>
+							<entry name="EMail" inpkey="39" componentid="19"/>
+							<entry name="Phone" inpkey="40" componentid="20"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Details" outkey="41" componentid="22"/>
+						</root>
+					</data>
+				</component>
+				<component name="object" library="json" uid="6" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="735" rbx="1042" rby="592"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" ns="1" expanded="1">
+										<entry name="object" ns="1" expanded="1">
+											<entry name="property" type="json-property" inpkey="15" expanded="1">
+												<entry name="name" type="json-propertyname" inpkey="16"/>
+												<entry name="array" ns="1" expanded="1">
+													<entry name="item" ns="1" type="json-item" inpkey="17" expanded="1">
+														<entry name="object" ns="1" expanded="1">
+															<entry name="property" type="json-property" expanded="1">
+																<entry name="name" type="json-propertyname" inpkey="18"/>
+																<entry name="string" ns="1" inpkey="19"/>
+															</entry>
+															<entry name="property" type="json-property" expanded="1" clone="1">
+																<entry name="name" type="json-propertyname" inpkey="36"/>
+																<entry name="string" ns="1" inpkey="37"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<json schema="object.schema.json"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="15" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="617" lty="308" rbx="684" rby="326"/>
+					<data>
+						<constant value="Name" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="group-by" library="core" uid="9" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="3"/>
+						<datapoint pos="1" key="4"/>
+					</targets>
+					<view ltx="494" lty="115" rbx="603" rby="171"/>
+				</component>
+				<component name="Altova_Hierarchical" library="json" uid="2" kind="31">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="280" rby="387"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="object" expanded="1">
+											<entry name="Name" type="json-property" expanded="1"/>
+											<entry name="Office" type="json-property" expanded="1">
+												<entry name="array" expanded="1">
+													<entry name="item" type="json-item" expanded="1">
+														<entry name="object" expanded="1">
+															<entry name="Desc" type="json-property" expanded="1"/>
+															<entry name="EMail" type="json-property" expanded="1"/>
+															<entry name="Established" type="json-property" expanded="1"/>
+															<entry name="Fax" type="json-property" expanded="1"/>
+															<entry name="Name" type="json-property" expanded="1"/>
+															<entry name="Phone" type="json-property" expanded="1"/>
+															<entry name="Address" type="json-property" expanded="1"/>
+															<entry name="Department" type="json-property" expanded="1">
+																<entry name="array" expanded="1">
+																	<entry name="item" type="json-item" expanded="1">
+																		<entry name="object" outkey="47" expanded="1">
+																			<entry name="Name" type="json-property" expanded="1">
+																				<entry name="string" outkey="48"/>
+																			</entry>
+																			<entry name="Person" type="json-property" expanded="1">
+																				<entry name="array" expanded="1">
+																					<entry name="item" type="json-item" expanded="1">
+																						<entry name="object" expanded="1">
+																							<entry name="EMail" type="json-property" expanded="1">
+																								<entry name="string" outkey="49"/>
+																							</entry>
+																							<entry name="First" type="json-property" expanded="1">
+																								<entry name="string" outkey="50"/>
+																							</entry>
+																							<entry name="Last" type="json-property" expanded="1">
+																								<entry name="string" outkey="51"/>
+																							</entry>
+																							<entry name="PhoneExt" type="json-property" expanded="1">
+																								<entry name="number" outkey="52"/>
+																							</entry>
+																							<entry name="Title" type="json-property" expanded="1">
+																								<entry name="string" outkey="53"/>
+																							</entry>
+																						</entry>
+																					</entry>
+																				</entry>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<json schema="Altova_Hierarchical.schema.json" inputinstance="Altova_Hierarchical.json" outputinstance="Altova_Hierarchical.json"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="15" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="16" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="11" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="19" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="18" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="36" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="37" edgekey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="1" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="2" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="39" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="17" edgekey="57"/>
+							<edge vertexkey="10" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="12" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="40" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="53">
+						<edges>
+							<edge vertexkey="38" edgekey="61"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="Person2Details" library="user" blackbox="0" uid="17" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="EMail" library="core" uid="19" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="9" lty="63" rbx="82" rby="102"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="EMail"/>
+					</data>
+				</component>
+				<component name="Phone" library="core" uid="20" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="9" lty="122" rbx="88" rby="161"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="Phone"/>
+					</data>
+				</component>
+				<component name="Details" library="core" uid="22" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="8"/>
+					</sources>
+					<view ltx="392" lty="63" rbx="452" rby="102"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="Details"/>
+					</data>
+				</component>
+				<component name="Title" library="core" uid="23" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="10" lty="15" rbx="79" rby="54"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="Title"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="24" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="105" lty="67" rbx="178" rby="85"/>
+					<data>
+						<constant value=", EMail:" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="25" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="104" lty="101" rbx="186" rby="119"/>
+					<data>
+						<constant value=", Phone: " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="21" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+						<datapoint pos="1" key="10"/>
+						<datapoint pos="2" key="4"/>
+						<datapoint pos="3" key="12"/>
+						<datapoint pos="4" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="246" lty="28" rbx="331" rby="140"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="4" edgekey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="6" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="16"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="10" edgekey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="12" edgekey="18"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

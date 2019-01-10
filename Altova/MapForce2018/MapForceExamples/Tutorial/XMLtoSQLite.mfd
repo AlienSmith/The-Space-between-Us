@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="26">
+	<resources>
+		<datasources>
+			<datasource name="Articles">
+				<properties JDBCDriver="org.sqlite.JDBC" JDBCDatabaseURL="Articles.db" DBDataSource="Articles.db"/>
+				<database_connection database_kind="SQLite" import_kind="SQLite" version="3.8" ConnectionString="Articles.db" name="Articles" path="Articles" allow_background_retrieval="No">
+					<properties>
+						<property name="Database Kind" value="SQLite"/>
+						<property name="Import Kind" value="SQLite"/>
+						<property name="Root Object" value="main"/>
+						<property name="Data Source" value="Articles.db"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="Articles" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="192" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Articles" expanded="1">
+										<entry name="Article" outkey="5" expanded="1">
+											<entry name="Number" outkey="6"/>
+											<entry name="Name" outkey="7"/>
+											<entry name="SinglePrice" outkey="8"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" inputinstance="Articles.xml" outputinstance="Articles.xml" instanceroot="{}Articles"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="6" kind="15">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="302" rbx="452" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="articles" type="table" inpkey="29" expanded="1" dbbefore="delete">
+									<tableactions>
+										<action proceedchildren="1"/>
+									</tableactions>
+									<entry name="number" inpkey="30"/>
+									<entry name="name" inpkey="31"/>
+									<entry name="singleprice" inpkey="32"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<database ref="Articles">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="Articles" Kind="DataSource"/>
+										<PathElement Name="main" Kind="Database"/>
+										<PathElement Name="articles" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="29" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="30" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="31" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="32" edgekey="36"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

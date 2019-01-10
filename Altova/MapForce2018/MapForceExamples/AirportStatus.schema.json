@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/object_02",
+  "definitions": {
+    "object_01": {
+      "title": "weather",
+      "type": "object",
+      "properties": {
+        "visibility": {
+          "type": "number"
+        },
+        "weather": {
+          "type": "string"
+        },
+        "meta": {
+          "title": "meta",
+          "type": "object",
+          "properties": {
+            "credit": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        },
+        "temp": {
+          "type": "string"
+        },
+        "wind": {
+          "type": "string"
+        }
+      }
+    },
+    "object_02": {
+      "type": "object",
+      "properties": {
+        "delay": {
+          "type": "string"
+        },
+        "IATA": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "weather": {
+          "$ref": "#/definitions/object_01"
+        },
+        "ICAO": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "status": {
+          "title": "status",
+          "type": "object",
+          "properties": {
+            "reason": {
+              "type": "string"
+            },
+            "closureBegin": {
+              "type": "string"
+            },
+            "endTime": {
+              "type": "string"
+            },
+            "minDelay": {
+              "type": "string"
+            },
+            "avgDelay": {
+              "type": "string"
+            },
+            "maxDelay": {
+              "type": "string"
+            },
+            "closureEnd": {
+              "type": "string"
+            },
+            "trend": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

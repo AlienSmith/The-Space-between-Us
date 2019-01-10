@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexText>
+	<Commands>
+		<Project FileName="Name.txt " ByteOrderMark="0">
+			<Version/>
+			<RootName Value="Root"/>
+			<Connections>
+				<Connection>
+					<CSV QuoteCharacter='"'>
+						<Version/>
+						<RecordSeparator Value="%0D%0A"/>
+						<FieldSeparator Value="*#*"/>
+						<RecordName Value="CSV"/>
+						<Fields>
+							<Field Type="string">
+								<Name Value="First"/>
+								<Version/>
+							</Field>
+							<Field Type="string">
+								<Name Value="Last"/>
+								<Version/>
+							</Field>
+							<Field Type="string">
+								<Name Value="Mother"/>
+								<Version/>
+							</Field>
+							<Field Type="string">
+								<Name Value="Father"/>
+								<Version/>
+							</Field>
+						</Fields>
+						<Connections>
+							<Connection/>
+						</Connections>
+						<XData>
+							<FieldWidths Item="81" Item1="94" Item2="50" Item3="50"/>
+							<OpenState Property="1" Preview="1" Connector="1"/>
+							<Dimension FullWidth="807" TextHeight="329"/>
+						</XData>
+					</CSV>
+				</Connection>
+			</Connections>
+			<XData>
+				<OpenState Property="1" Preview="1" Connector="1"/>
+				<Dimension/>
+			</XData>
+		</Project>
+		<Functions/>
+	</Commands>
+</FlexText>

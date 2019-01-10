@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="26">
+	<resources>
+		<datasources>
+			<datasource name="dbserialize">
+				<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:dbserialize.db;" DBDataSource="dbserialize.db"/>
+				<database_connection database_kind="SQLite" import_kind="SQLite" version="3.8" ConnectionString="dbserialize.db" name="dbserialize" path="dbserialize" allow_background_retrieval="No">
+					<properties>
+						<property name="Database Kind" value="SQLite"/>
+						<property name="Import Kind" value="SQLite"/>
+						<property name="Root Object" value="main"/>
+						<property name="Data Source" value="dbserialize.db"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="MFCompany" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="173" rby="217"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://my-company.com/namespace"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Company" expanded="1">
+										<entry name="Person" outkey="1" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="MFCompany.xsd" inputinstance="MFCompany.xml" outputinstance="MFCompany.xml" instanceroot="{http://my-company.com/namespace}Company"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="4" kind="15">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="499" rbx="649" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="PEOPLE" type="table" inpkey="4" expanded="1" dbbefore="delete">
+									<tableactions>
+										<action proceedchildren="1"/>
+									</tableactions>
+									<entry name="ID" valuekeygeneration="maxnumber"/>
+									<entry name="PERSON" inpkey="5"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<database ref="dbserialize">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="dbserialize" Kind="DataSource"/>
+										<PathElement Name="main" Kind="Database"/>
+										<PathElement Name="PEOPLE" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="MFCompany" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" WriteXMLDeclaration="0"/>
+					<view ltx="254" lty="84" rbx="425" rby="284"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://my-company.com/namespace"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" outkey="2" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Person" inpkey="3" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="MFCompany.xsd" inputinstance="MFCompany.xml" outputinstance="MFCompany.xml" instanceroot="{http://my-company.com/namespace}Person"/>
+						<wsdl/>
+						<parameter usageKind="stringserialize"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="6">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="3" edgekey="6"/>
+							<edge vertexkey="4" edgekey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="5" edgekey="8"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

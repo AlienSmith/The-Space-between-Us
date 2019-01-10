@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2018r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="31">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="Text file" library="text" uid="2" kind="16">
+					<properties/>
+					<view rbx="176" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="1" expanded="1">
+										<entry name="Field1" outkey="12"/>
+										<entry name="Field2" outkey="13"/>
+										<entry name="Field3" outkey="14"/>
+										<entry name="Field4" outkey="15"/>
+										<entry name="Field5" outkey="16"/>
+										<entry name="Field6" outkey="17"/>
+										<entry name="Field7" outkey="18"/>
+										<entry name="Field8" outkey="19"/>
+										<entry name="Field9" outkey="20"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" inputinstance="Orders.csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="false">
+								<names root="Orders" block="Rows">
+									<field0 name="Field1" type="string"/>
+									<field1 name="Field2" type="string"/>
+									<field2 name="Field3" type="string"/>
+									<field3 name="Field4" type="string"/>
+									<field4 name="Field5" type="string"/>
+									<field5 name="Field6" type="string"/>
+									<field6 name="Field7" type="string"/>
+									<field7 name="Field8" type="string"/>
+									<field8 name="Field9" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="Text file" library="text" uid="3" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="377" rbx="545" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" inpkey="2" expanded="1">
+										<inputnodefunctions>
+											<rule applyto="descendants">
+												<function name="8BFD63D2-AED0-443D-9D7D-3A5BC7126C45"/>
+												<filter datatype="string"/>
+											</rule>
+										</inputnodefunctions>
+										<entry name="Field1" inpkey="3"/>
+										<entry name="Field2" inpkey="4"/>
+										<entry name="Field3" inpkey="5"/>
+										<entry name="Field4" inpkey="6"/>
+										<entry name="Field5" inpkey="7"/>
+										<entry name="Field6" inpkey="8"/>
+										<entry name="Field7" inpkey="9"/>
+										<entry name="Field8" inpkey="10"/>
+										<entry name="Field9" inpkey="11"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Field1" type="string"/>
+									<field1 name="Field2" type="string"/>
+									<field2 name="Field3" type="string"/>
+									<field3 name="Field4" type="string"/>
+									<field4 name="Field5" type="string"/>
+									<field5 name="Field6" type="string"/>
+									<field6 name="Field7" type="string"/>
+									<field7 name="Field8" type="string"/>
+									<field8 name="Field9" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="1" to="2"/>
+			<edge from="12" to="3"/>
+			<edge from="13" to="4"/>
+			<edge from="14" to="5"/>
+			<edge from="15" to="6"/>
+			<edge from="16" to="7"/>
+			<edge from="17" to="8"/>
+			<edge from="18" to="9"/>
+			<edge from="19" to="10"/>
+			<edge from="20" to="11"/>
+		</connections>
+	</component>
+	<component name="8BFD63D2-AED0-443D-9D7D-3A5BC7126C45" library="mapforce_nodefunction" uid="4" editable="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="if-else" library="core" uid="7" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="8"/>
+						<datapoint pos="2" key="9"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="245" rbx="345" rby="73"/>
+				</component>
+				<component name="raw_value" library="core" uid="5" kind="6">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view rbx="78" rby="38"/>
+					<data>
+						<input datatype="anySimpleType"/>
+						<parameter usageKind="input" name="raw_value"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="10" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="111" rbx="168" rby="17"/>
+					<data>
+						<constant value="n/a" datatype="string"/>
+					</data>
+				</component>
+				<component name="result" library="core" uid="6" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="416" rbx="473" rby="38"/>
+					<data>
+						<output datatype="anySimpleType"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="empty" library="lang" uid="12" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="111" lty="-58" rbx="183" rby="-20"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="10" to="1"/>
+			<edge from="13" to="7"/>
+			<edge from="6" to="8"/>
+			<edge from="2" to="9"/>
+			<edge from="2" to="12"/>
+		</connections>
+	</component>
+</mapping>

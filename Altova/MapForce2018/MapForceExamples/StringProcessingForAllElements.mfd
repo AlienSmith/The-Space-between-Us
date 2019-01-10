@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1">
+		<properties SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Employees" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="230" rby="333"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Company" expanded="1">
+										<entry name="Name" outkey="25"/>
+										<entry name="Employees" outkey="26" expanded="1" use-generic-elements="1">
+											<entry name="element()" ns="1" outkey="1" expanded="1" show-schema-children="0">
+												<typeselections>
+													<type>
+														<entry name="EmployeeType" type="xml-type"/>
+													</type>
+												</typeselections>
+												<entry name="NodeName" ns="1" outkey="17"/>
+												<entry name="EmployeeType" type="xml-type" outkey="38" expanded="1" use-generic-elements="1">
+													<entry name="element()" ns="1" outkey="2" expanded="1" show-schema-children="0">
+														<typeselections/>
+														<entry name="NodeName" ns="1" outkey="18"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Employees.xsd" inputinstance="Employees.xml" outputinstance="Employees.xml" instanceroot="{}Company"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Employees" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="540" rbx="770" rby="333"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Company" expanded="1">
+										<entry name="Name" inpkey="23"/>
+										<entry name="Employees" inpkey="24" expanded="1" use-generic-elements="1">
+											<entry name="element()" ns="1" inpkey="10" expanded="1" show-schema-children="0">
+												<typeselections>
+													<type>
+														<entry name="EmployeeType" type="xml-type"/>
+													</type>
+												</typeselections>
+												<entry name="NodeName" ns="1" inpkey="12"/>
+												<entry name="EmployeeType" type="xml-type" inpkey="37" expanded="1" use-generic-elements="1">
+													<entry name="element()" ns="1" inpkey="13" expanded="1" show-schema-children="0">
+														<typeselections/>
+														<entry name="NodeName" ns="1" inpkey="14"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Employees.xsd" instanceroot="{}Company"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="upper-case" library="xpath2" uid="9" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="33"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="34"/>
+					</targets>
+					<view ltx="352" lty="136" rbx="435" rby="175"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="10" edgekey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="33" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="12" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="14" edgekey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="23" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="24" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="13" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="37" edgekey="39"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

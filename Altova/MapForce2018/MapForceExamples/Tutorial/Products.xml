@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="products.xsd">
+	<product>
+		<id>1</id>
+		<color>red</color>
+		<size>10</size>		
+	</product>
+	<product>
+		<id>2</id>
+		<color>blue</color>
+		<size>20</size>		
+	</product>
+	<product>
+		<id>3</id>
+		<color>green</color>
+		<size>30</size>		
+	</product>
+</products>

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="8">
+	<component name="defaultmap2" blackbox="0" uid="127271456" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="127069320" kind="2">
+					<targets>
+						<datapoint pos="0" key="47689080"/>
+					</targets>
+					<view ltx="193" lty="210" rbx="-295" rby="17"/>
+					<data>
+						<constant value=" " datatype="string"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="126945568" kind="14">
+					<properties/>
+					<view rbx="150" rby="548"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:expense-report" expanded="1" outkey="51264832">
+								<entry name="0:@detailed" expanded="1"/>
+								<entry name="0:@currency" expanded="1" outkey="58407656"/>
+								<entry name="0:Person" expanded="1" outkey="58408216">
+									<entry name="0:First" expanded="1" outkey="58440184"/>
+									<entry name="0:Last" expanded="1" outkey="58440744"/>
+									<entry name="0:Title" expanded="1" outkey="58441024"/>
+									<entry name="0:Phone" expanded="1" outkey="51265144"/>
+									<entry name="0:Email" expanded="1" outkey="47663136"/>
+								</entry>
+								<entry name="0:expense-item" expanded="1" outkey="58408456">
+									<entry name="0:@type" expanded="1" outkey="58407056"/>
+									<entry name="0:@expto" expanded="1" outkey="58407336"/>
+									<entry name="0:Date" expanded="1" outkey="58407896"/>
+									<entry name="0:Meal" expanded="1">
+										<entry name="0:@mealtype" expanded="1"/>
+										<entry name="0:Name" expanded="1"/>
+										<entry name="0:Location" expanded="1"/>
+									</entry>
+									<entry name="0:Lodging" expanded="1" outkey="58664744">
+										<entry name="0:@Lodge-cost" expanded="1" outkey="51264744"/>
+										<entry name="0:Name" expanded="1"/>
+										<entry name="0:Location" expanded="1"/>
+									</entry>
+									<entry name="0:Travel" expanded="1" outkey="51265056">
+										<entry name="0:@means" expanded="1"/>
+										<entry name="0:@Trav-cost" expanded="1" outkey="58440504"/>
+										<entry name="0:Destination" expanded="1"/>
+										<entry name="0:Mileage" expanded="1"/>
+									</entry>
+									<entry name="0:Parking" expanded="1">
+										<entry name="0:Location" expanded="1"/>
+									</entry>
+									<entry name="0:Entertainment" expanded="1">
+										<entry name="0:Client-name" expanded="1"/>
+									</entry>
+									<entry name="0:Misc" expanded="1">
+										<entry name="0:@misctype" expanded="1"/>
+									</entry>
+									<entry name="0:description" expanded="1">
+										<entry name="0:strong" expanded="1">
+											<entry name="0:italic" expanded="1"/>
+										</entry>
+										<entry name="0:italic" expanded="1">
+											<entry name="0:strong" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="mf-ExpReport.xsd" inputinstance="mf-ExpReport.xml" outputinstance="mf-ExpReport.xml" instanceroot="{}expense-report"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="127602184" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="47665176"/>
+						<datapoint pos="1" key="51037288"/>
+						<datapoint pos="2" key="58593424"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="51390144"/>
+					</targets>
+					<view ltx="241" lty="9" rbx="-7" rby="-73"/>
+				</component>
+				<component name="constant" library="core" uid="127138616" kind="2">
+					<targets>
+						<datapoint pos="0" key="51037416"/>
+					</targets>
+					<view ltx="185" lty="372" rbx="-303" rby="-59"/>
+					<data>
+						<constant value="Travel" datatype="string"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="127138240" kind="5">
+					<sources>
+						<datapoint pos="0" key="51518248"/>
+						<datapoint pos="1" key="51517992"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="51565936"/>
+					</targets>
+					<view ltx="180" lty="282" rbx="-38" rby="-173"/>
+				</component>
+				<component name="document" library="xml" uid="128396248" kind="14">
+					<properties/>
+					<view ltx="379" rbx="555" rby="245"/>
+					<data>
+						<root scrollposition="46">
+							<header>
+								<namespaces>
+									<namespace uid="http://my-company.com/namespace"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:Company" expanded="1" inpkey="51174496">
+								<entry name="0:Employee" expanded="1" inpkey="51174776">
+									<entry name="0:Title" expanded="1" inpkey="51333464"/>
+									<entry name="0:Name" expanded="1" inpkey="51334024"/>
+									<entry name="0:Tel." expanded="1" inpkey="51175296"/>
+									<entry name="0:Email" expanded="1" inpkey="51175016"/>
+									<entry name="0:DomesticDailyRate" expanded="1"/>
+									<entry name="0:ForeignDailyRate" expanded="1"/>
+									<entry name="0:Expense-detail" expanded="1"/>
+									<entry name="0:expense-item" expanded="1" inpkey="51333224">
+										<entry name="1:@Currency" expanded="1" inpkey="51333784"/>
+										<entry name="1:@Bill-to" expanded="1" inpkey="51175616"/>
+										<entry name="0:Date" expanded="1" inpkey="51174176"/>
+										<entry name="0:Travel" expanded="1" inpkey="50903864">
+											<entry name="1:@Travel-Cost" expanded="1" inpkey="51332984"/>
+											<entry name="0:Destination" expanded="1"/>
+											<entry name="0:Car-Rental" expanded="1"/>
+											<entry name="0:Air-Travel" expanded="1"/>
+											<entry name="0:Misc-Travel" expanded="1"/>
+										</entry>
+										<entry name="0:Accommodation" expanded="1">
+											<entry name="0:DomesticAcc" expanded="1">
+												<entry name="1:@DomesticAcc-Cost" expanded="1"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+											<entry name="0:ForeignAcc" expanded="1">
+												<entry name="1:@ForeignAcc-Cost" expanded="1"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="0:Entertainment" expanded="1">
+											<entry name="1:@Entertainment-Cost" expanded="1"/>
+											<entry name="0:Client-Name" expanded="1"/>
+											<entry name="0:Restaurant" expanded="1"/>
+											<entry name="0:Gifts" expanded="1"/>
+										</entry>
+										<entry name="0:Misc" expanded="1">
+											<entry name="1:@MiscExpense-Cost" expanded="1"/>
+										</entry>
+										<entry name="0:description" expanded="1">
+											<entry name="0:strong" expanded="1">
+												<entry name="0:italic" expanded="1"/>
+											</entry>
+											<entry name="0:italic" expanded="1">
+												<entry name="0:strong" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+									<entry name="0:CashAdvance" expanded="1">
+										<entry name="1:@CashAdvance-Domestic" expanded="1"/>
+										<entry name="1:@CashAdvance-Foreign" expanded="1"/>
+									</entry>
+								</entry>
+								<entry name="0:Exec" expanded="1">
+									<entry name="0:Title" expanded="1"/>
+									<entry name="0:Name" expanded="1"/>
+									<entry name="0:Tel." expanded="1"/>
+									<entry name="0:Email" expanded="1"/>
+									<entry name="0:DomesticDailyRate" expanded="1"/>
+									<entry name="0:ForeignDailyRate" expanded="1"/>
+									<entry name="0:Expense-detail" expanded="1"/>
+									<entry name="0:expense-item" expanded="1">
+										<entry name="1:@Currency" expanded="1"/>
+										<entry name="1:@Bill-to" expanded="1"/>
+										<entry name="0:Date" expanded="1"/>
+										<entry name="0:Travel" expanded="1">
+											<entry name="1:@Travel-Cost" expanded="1"/>
+											<entry name="0:Destination" expanded="1"/>
+											<entry name="0:Car-Rental" expanded="1"/>
+											<entry name="0:Air-Travel" expanded="1"/>
+											<entry name="0:Misc-Travel" expanded="1"/>
+										</entry>
+										<entry name="0:Accommodation" expanded="1">
+											<entry name="0:DomesticAcc" expanded="1">
+												<entry name="1:@DomesticAcc-Cost" expanded="1"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+											<entry name="0:ForeignAcc" expanded="1">
+												<entry name="1:@ForeignAcc-Cost" expanded="1"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="0:Entertainment" expanded="1">
+											<entry name="1:@Entertainment-Cost" expanded="1"/>
+											<entry name="0:Client-Name" expanded="1"/>
+											<entry name="0:Restaurant" expanded="1"/>
+											<entry name="0:Gifts" expanded="1"/>
+										</entry>
+										<entry name="0:Misc" expanded="1">
+											<entry name="1:@MiscExpense-Cost" expanded="1"/>
+										</entry>
+										<entry name="0:description" expanded="1">
+											<entry name="0:strong" expanded="1">
+												<entry name="0:italic" expanded="1"/>
+											</entry>
+											<entry name="0:italic" expanded="1">
+												<entry name="0:strong" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+									<entry name="0:CashAdvance" expanded="1">
+										<entry name="1:@CashAdvance-Domestic" expanded="1"/>
+										<entry name="1:@CashAdvance-Foreign" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ExpReport-Target.xsd" outputinstance="ExpReport-Target.xml" instanceroot="{http://my-company.com/namespace}Company"/>
+					</data>
+				</component>
+				<component name="expense-item" library="core" uid="127062144" kind="3">
+					<sources>
+						<datapoint pos="0" key="51556488"/>
+						<datapoint pos="1" key="51556400"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="51556176"/>
+						<datapoint pos="1" key="51556088"/>
+					</targets>
+					<view ltx="266" lty="249" rbx="-222" rby="-111"/>
+				</component>
+				<component name="document" library="xml" uid="127915848" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="632" rbx="828" rby="378"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://my-company.com/namespace"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:Company" expanded="1">
+								<entry name="0:Employee" expanded="1" inpkey="51439328">
+									<entry name="0:Title" expanded="1" inpkey="51439568"/>
+									<entry name="0:Name" expanded="1" inpkey="51439848"/>
+									<entry name="0:Tel." expanded="1" inpkey="51440128"/>
+									<entry name="0:Email" expanded="1" inpkey="51669160"/>
+									<entry name="0:DomesticDailyRate" expanded="1"/>
+									<entry name="0:ForeignDailyRate" expanded="1"/>
+									<entry name="0:Expense-detail" expanded="1"/>
+									<entry name="0:expense-item" expanded="1" inpkey="51669016">
+										<entry name="1:@Currency" expanded="1" inpkey="51438696"/>
+										<entry name="1:@Bill-to" expanded="1" inpkey="51438416"/>
+										<entry name="0:Date" expanded="1" inpkey="51667680"/>
+										<entry name="0:Travel" expanded="1">
+											<entry name="1:@Travel-Cost" expanded="1"/>
+											<entry name="0:Destination" expanded="1"/>
+											<entry name="0:Car-Rental" expanded="1"/>
+											<entry name="0:Air-Travel" expanded="1"/>
+											<entry name="0:Misc-Travel" expanded="1"/>
+										</entry>
+										<entry name="0:Accommodation" expanded="1" inpkey="51124744">
+											<entry name="0:DomesticAcc" expanded="1" inpkey="51382208">
+												<entry name="1:@DomesticAcc-Cost" expanded="1" inpkey="51439008"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+											<entry name="0:ForeignAcc" expanded="1">
+												<entry name="1:@ForeignAcc-Cost" expanded="1"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="0:Entertainment" expanded="1">
+											<entry name="1:@Entertainment-Cost" expanded="1"/>
+											<entry name="0:Client-Name" expanded="1"/>
+											<entry name="0:Restaurant" expanded="1"/>
+											<entry name="0:Gifts" expanded="1"/>
+										</entry>
+										<entry name="0:Misc" expanded="1">
+											<entry name="1:@MiscExpense-Cost" expanded="1"/>
+										</entry>
+										<entry name="0:description" expanded="1">
+											<entry name="0:strong" expanded="1">
+												<entry name="0:italic" expanded="1"/>
+											</entry>
+											<entry name="0:italic" expanded="1">
+												<entry name="0:strong" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+									<entry name="0:CashAdvance" expanded="1">
+										<entry name="1:@CashAdvance-Domestic" expanded="1"/>
+										<entry name="1:@CashAdvance-Foreign" expanded="1"/>
+									</entry>
+								</entry>
+								<entry name="0:Exec" expanded="1">
+									<entry name="0:Title" expanded="1"/>
+									<entry name="0:Name" expanded="1"/>
+									<entry name="0:Tel." expanded="1"/>
+									<entry name="0:Email" expanded="1"/>
+									<entry name="0:DomesticDailyRate" expanded="1"/>
+									<entry name="0:ForeignDailyRate" expanded="1"/>
+									<entry name="0:Expense-detail" expanded="1"/>
+									<entry name="0:expense-item" expanded="1">
+										<entry name="1:@Currency" expanded="1"/>
+										<entry name="1:@Bill-to" expanded="1"/>
+										<entry name="0:Date" expanded="1"/>
+										<entry name="0:Travel" expanded="1">
+											<entry name="1:@Travel-Cost" expanded="1"/>
+											<entry name="0:Destination" expanded="1"/>
+											<entry name="0:Car-Rental" expanded="1"/>
+											<entry name="0:Air-Travel" expanded="1"/>
+											<entry name="0:Misc-Travel" expanded="1"/>
+										</entry>
+										<entry name="0:Accommodation" expanded="1">
+											<entry name="0:DomesticAcc" expanded="1">
+												<entry name="1:@DomesticAcc-Cost" expanded="1"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+											<entry name="0:ForeignAcc" expanded="1">
+												<entry name="1:@ForeignAcc-Cost" expanded="1"/>
+												<entry name="0:Location" expanded="1"/>
+												<entry name="0:Hotel" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="0:Entertainment" expanded="1">
+											<entry name="1:@Entertainment-Cost" expanded="1"/>
+											<entry name="0:Client-Name" expanded="1"/>
+											<entry name="0:Restaurant" expanded="1"/>
+											<entry name="0:Gifts" expanded="1"/>
+										</entry>
+										<entry name="0:Misc" expanded="1">
+											<entry name="1:@MiscExpense-Cost" expanded="1"/>
+										</entry>
+										<entry name="0:description" expanded="1">
+											<entry name="0:strong" expanded="1">
+												<entry name="0:italic" expanded="1"/>
+											</entry>
+											<entry name="0:italic" expanded="1">
+												<entry name="0:strong" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+									<entry name="0:CashAdvance" expanded="1">
+										<entry name="1:@CashAdvance-Domestic" expanded="1"/>
+										<entry name="1:@CashAdvance-Foreign" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ExpReport-Target.xsd" outputinstance="SecondXML.xml" instanceroot="{http://my-company.com/namespace}Company"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="51523200"/>
+					<edge edgekey="51523352"/>
+					<edge edgekey="51523504"/>
+					<edge edgekey="51523656"/>
+					<edge edgekey="51523808"/>
+					<edge edgekey="51523960"/>
+					<edge edgekey="51524112"/>
+					<edge edgekey="51524264"/>
+					<edge edgekey="51524416"/>
+					<edge edgekey="51524568"/>
+					<edge edgekey="51524720"/>
+					<edge edgekey="51524872"/>
+					<edge edgekey="51525024"/>
+					<edge edgekey="51525176"/>
+					<edge edgekey="51525328"/>
+					<edge edgekey="51525480"/>
+					<edge edgekey="51525632"/>
+					<edge edgekey="58469464"/>
+					<edge edgekey="58469616"/>
+					<edge edgekey="58469768"/>
+					<edge edgekey="58469920"/>
+					<edge edgekey="58470072"/>
+					<edge edgekey="58470224"/>
+					<edge edgekey="58470376"/>
+					<edge edgekey="58470528"/>
+					<edge edgekey="58470680"/>
+					<edge edgekey="58470832"/>
+					<edge edgekey="58470984"/>
+					<edge edgekey="58471136"/>
+					<edge edgekey="58471288"/>
+					<edge edgekey="58471440"/>
+				</edges>
+				<vertices>
+					<vertex vertexkey="47663136">
+						<edges>
+							<edge vertexkey="51175016" edgekey="51523960"/>
+							<edge vertexkey="51669160" edgekey="51524112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47689080">
+						<edges>
+							<edge vertexkey="51037288" edgekey="58469616"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51037416">
+						<edges>
+							<edge vertexkey="51517992" edgekey="51525480"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51264744">
+						<edges>
+							<edge vertexkey="51439008" edgekey="58470984"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51264832">
+						<edges>
+							<edge vertexkey="51174496" edgekey="58470832"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51265056">
+						<edges>
+							<edge vertexkey="50903864" edgekey="51525328"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51265144">
+						<edges>
+							<edge vertexkey="51175296" edgekey="51523656"/>
+							<edge vertexkey="51440128" edgekey="51523808"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51390144">
+						<edges>
+							<edge vertexkey="51334024" edgekey="58470224"/>
+							<edge vertexkey="51439848" edgekey="58470072"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51556088">
+						<edges>
+							<edge vertexkey="51669016" edgekey="51525632"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51556176">
+						<edges>
+							<edge vertexkey="51333224" edgekey="58471136"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51565936">
+						<edges>
+							<edge vertexkey="51556400" edgekey="58470528"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58407056">
+						<edges>
+							<edge vertexkey="51518248" edgekey="51524264"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58407336">
+						<edges>
+							<edge vertexkey="51175616" edgekey="51524416"/>
+							<edge vertexkey="51438416" edgekey="51524568"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58407656">
+						<edges>
+							<edge vertexkey="51333784" edgekey="58469920"/>
+							<edge vertexkey="51438696" edgekey="58470376"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58407896">
+						<edges>
+							<edge vertexkey="51174176" edgekey="51524720"/>
+							<edge vertexkey="51667680" edgekey="51524872"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58408216">
+						<edges>
+							<edge vertexkey="51174776" edgekey="58469768"/>
+							<edge vertexkey="51439328" edgekey="58471288"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58408456">
+						<edges>
+							<edge vertexkey="51556488" edgekey="58471440"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58440184">
+						<edges>
+							<edge vertexkey="47665176" edgekey="51523200"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58440504">
+						<edges>
+							<edge vertexkey="51332984" edgekey="58470680"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58440744">
+						<edges>
+							<edge vertexkey="58593424" edgekey="58469464"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58441024">
+						<edges>
+							<edge vertexkey="51333464" edgekey="51523352"/>
+							<edge vertexkey="51439568" edgekey="51523504"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58664744">
+						<edges>
+							<edge vertexkey="51382208" edgekey="51525024"/>
+							<edge vertexkey="51124744" edgekey="51525176"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

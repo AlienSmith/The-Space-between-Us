@@ -1,0 +1,17 @@
+[
+	{
+		"name": "Alethia Alonso",
+		"email": "altethia@example.com",
+		"age": 35,
+		"birthday": "4 July"			
+	}, {
+		"name": "Klaus Mauer",
+		"email": "klaus@example.com",
+		"age": 57,
+		"birthday": "31 August"
+	}, {
+		"name": "Natsuo Shinohara",
+		"email": "natsuo@example.com",
+		"age": 29
+	}	
+]

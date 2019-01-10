@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2015r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="26">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Text file" library="text" uid="9" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="595" lty="35" rbx="777" rby="153"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="261" expanded="1">
+										<entry name="First" inpkey="262"/>
+										<entry name="Last" inpkey="263"/>
+										<entry name="Mother&apos;s Name" inpkey="264"/>
+										<entry name="Father&apos;s Name" inpkey="265"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="First" type="string"/>
+									<field1 name="Last" type="string"/>
+									<field2 name="Mother&apos;s Name" type="string"/>
+									<field3 name="Father&apos;s Name" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="parse (Name)" library="text" uid="10" kind="16">
+					<properties/>
+					<view ltx="314" lty="60" rbx="493" rby="187"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" inpkey="255" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Root" outkey="256" expanded="1">
+										<entry name="CSV" expanded="1">
+											<entry name="First" outkey="257"/>
+											<entry name="Last" outkey="258"/>
+											<entry name="Mother" outkey="259"/>
+											<entry name="Father" outkey="260"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="txt" inputinstance="Name.txt" encoding="52" byteorder="1" byteordermark="0" config="Name.mft"/>
+						<parameter usageKind="stringparse"/>
+					</data>
+				</component>
+				<component name="Names" library="xml" uid="8" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="38" lty="35" rbx="213" rby="97"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Names" expanded="1">
+										<entry name="Name" outkey="254"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Names.xsd" inputinstance="Names.xml" instanceroot="{}Names"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="254">
+						<edges>
+							<edge vertexkey="255" edgekey="266"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="256">
+						<edges>
+							<edge vertexkey="261" edgekey="267"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="257">
+						<edges>
+							<edge vertexkey="262" edgekey="268"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="258">
+						<edges>
+							<edge vertexkey="263" edgekey="269"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="259">
+						<edges>
+							<edge vertexkey="264" edgekey="270"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="260">
+						<edges>
+							<edge vertexkey="265" edgekey="271"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

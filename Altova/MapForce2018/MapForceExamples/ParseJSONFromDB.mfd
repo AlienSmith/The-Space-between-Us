@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2015r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="26">
+	<resources>
+		<datasources>
+			<datasource name="people">
+				<properties JDBCDriver="org.sqlite.JDBC" JDBCDatabaseURL="jdbc:sqlite:people.sqlite" DBDataSource="people.sqlite"/>
+				<database_connection database_kind="SQLite" import_kind="SQLite" version="3.8" ConnectionString="people.sqlite" name="people" path="people" allow_background_retrieval="No">
+					<properties>
+						<property name="Database Kind" value="SQLite"/>
+						<property name="Import Kind" value="SQLite"/>
+						<property name="Root Object" value="main"/>
+						<property name="Data Source" value="people.sqlite"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties ShowAnnotations="0" SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Department" library="core" uid="9" kind="6">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="121"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="122"/>
+					</targets>
+					<view ltx="132" lty="36" rbx="236" rby="75"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="Department" optional="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="10" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="120"/>
+					</targets>
+					<view ltx="20" lty="57" rbx="116" rby="75"/>
+					<data>
+						<constant value="Engineering" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="People" library="db" uid="25" kind="21">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="178"/>
+						<datapoint pos="1" key="179"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="180"/>
+					</targets>
+					<view ltx="319" lty="91" rbx="417" rby="147"/>
+					<data>
+						<where condition="Department = :Department">
+							<parameters>
+								<parameter name="Department" type="string" auto-detect="0"/>
+							</parameters>
+						</where>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="3" kind="15">
+					<properties/>
+					<view ltx="9" lty="108" rbx="167" rby="269"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="People" type="table" outkey="110" expanded="1">
+									<tableactions>
+										<action proceedchildren="1"/>
+									</tableactions>
+									<entry name="Id" valuekeygeneration="maxnumber"/>
+									<entry name="First" outkey="111"/>
+									<entry name="Last" outkey="112"/>
+									<entry name="Title" outkey="113"/>
+									<entry name="PhoneExt" outkey="114"/>
+									<entry name="EMail" outkey="115"/>
+									<entry name="SharesAndLeaves" outkey="105"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<database ref="people">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="people" Kind="DataSource"/>
+										<PathElement Name="main" Kind="Database"/>
+										<PathElement Name="People" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="People" library="core" uid="26" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="188"/>
+						<datapoint pos="1" key="189"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="190"/>
+						<datapoint/>
+					</targets>
+					<view ltx="589" lty="93" rbx="692" rby="149"/>
+				</component>
+				<component name="SharesAndLeaves" library="json" uid="4" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" PrettyPrint="0"/>
+					<view ltx="221" lty="254" rbx="379" rby="377"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" inpkey="104" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="object" expanded="1">
+											<entry name="Shares" type="json-property" expanded="1">
+												<entry name="number" outkey="185"/>
+											</entry>
+											<entry name="Leaves" type="json-property" expanded="1">
+												<entry name="object" expanded="1">
+													<entry name="Total" type="json-property" expanded="1">
+														<entry name="number" outkey="169"/>
+													</entry>
+													<entry name="Used" type="json-property" expanded="1">
+														<entry name="number" outkey="170"/>
+													</entry>
+													<entry name="Left" type="json-property" expanded="1">
+														<entry name="number" outkey="171"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<parameter usageKind="stringparse"/>
+						<json schema="SharesAndLeaves.schema.json" inputinstance="SharesAndLeaves.json"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="29" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="191"/>
+					</targets>
+					<view ltx="426" lty="274" rbx="464" rby="292"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="greater" library="core" uid="28" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="192"/>
+						<datapoint pos="1" key="193"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="194"/>
+					</targets>
+					<view ltx="487" lty="199" rbx="550" rby="255"/>
+				</component>
+				<component name="OrgChart" library="xml" uid="8" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="754" lty="36" rbx="918" rby="269"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.xmlspy.com/schemas/orgchart"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Department" expanded="1">
+										<entry name="Name" inpkey="127"/>
+										<entry name="Person" inpkey="128" expanded="1">
+											<entry name="First" inpkey="129"/>
+											<entry name="Last" inpkey="130"/>
+											<entry name="Title" inpkey="131"/>
+											<entry name="PhoneExt" inpkey="132"/>
+											<entry name="EMail" inpkey="133"/>
+											<entry name="Shares" inpkey="184"/>
+											<entry name="LeaveTotal" inpkey="135"/>
+											<entry name="LeaveUsed" inpkey="136"/>
+											<entry name="LeaveLeft" inpkey="137"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="OrgChart.xsd" instanceroot="{http://www.xmlspy.com/schemas/orgchart}Department" sps="OrgChartDepartment.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="105">
+						<edges>
+							<edge vertexkey="104" edgekey="164"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="110">
+						<edges>
+							<edge vertexkey="178" edgekey="195"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111">
+						<edges>
+							<edge vertexkey="129" edgekey="140"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="112">
+						<edges>
+							<edge vertexkey="130" edgekey="141"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113">
+						<edges>
+							<edge vertexkey="131" edgekey="142"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114">
+						<edges>
+							<edge vertexkey="132" edgekey="143"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="115">
+						<edges>
+							<edge vertexkey="133" edgekey="144"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="120">
+						<edges>
+							<edge vertexkey="121" edgekey="196"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="122">
+						<edges>
+							<edge vertexkey="127" edgekey="197"/>
+							<edge vertexkey="179" edgekey="198"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="169">
+						<edges>
+							<edge vertexkey="135" edgekey="175"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="170">
+						<edges>
+							<edge vertexkey="136" edgekey="176"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171">
+						<edges>
+							<edge vertexkey="137" edgekey="177"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="180">
+						<edges>
+							<edge vertexkey="188" edgekey="199"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="185">
+						<edges>
+							<edge vertexkey="184" edgekey="186"/>
+							<edge vertexkey="192" edgekey="200"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190">
+						<edges>
+							<edge vertexkey="128" edgekey="201"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="191">
+						<edges>
+							<edge vertexkey="193" edgekey="202"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="194">
+						<edges>
+							<edge vertexkey="189" edgekey="203"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

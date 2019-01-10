@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="28">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="airportCode" library="core" uid="4" kind="6">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="78"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="79"/>
+					</targets>
+					<view ltx="87" lty="90" rbx="192" rby="129"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="airportCode" optional="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="77"/>
+					</targets>
+					<view ltx="11" lty="26" rbx="72" rby="44"/>
+					<data>
+						<constant value="SFO" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="GET http://services.faa.gov/airport/status/{airportCode}" library="webservice" uid="2" kind="20">
+					<properties WSDLService="{}" WSDLPort="{}" WSDLOperation="{}"/>
+					<view ltx="262" lty="65" rbx="655" rby="460"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="HTTPMessage" ns="1" expanded="1">
+								<entry name="airportCode" inpkey="76" expanded="1"/>
+								<entry name="HTTPBody" ns="1" expanded="1"/>
+							</entry>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="HTTPMessage" ns="1" expanded="1">
+								<entry name="HTTPHeader" ns="1">
+									<entry name="name" expanded="1"/>
+								</entry>
+								<entry name="HTTPBody" ns="1" expanded="1">
+									<entry name="document" ns="1" type="doc-json" expanded="1" casttotargettypemode="cast-in-subtree">
+										<document schemafile="AirportStatus.schema.json" encoding="UTF-8" enableMinMaxOccursOptimizations="0" writeXMLDeclaration="0"/>
+										<entry name="root" expanded="1">
+											<entry name="object" outkey="1" expanded="1">
+												<entry name="delay" type="json-property" expanded="1">
+													<entry name="string" outkey="2"/>
+												</entry>
+												<entry name="IATA" type="json-property" expanded="1">
+													<entry name="string" outkey="3"/>
+												</entry>
+												<entry name="state" type="json-property" expanded="1">
+													<entry name="string" outkey="4"/>
+												</entry>
+												<entry name="name" type="json-property" expanded="1">
+													<entry name="string" outkey="5"/>
+												</entry>
+												<entry name="weather" type="json-property" expanded="1">
+													<entry name="object" outkey="6">
+														<entry name="visibility" type="json-property" expanded="1">
+															<entry name="number" outkey="7"/>
+														</entry>
+														<entry name="weather" type="json-property" expanded="1">
+															<entry name="string" outkey="82"/>
+														</entry>
+														<entry name="meta" type="json-property" expanded="1">
+															<entry name="object">
+																<entry name="credit" type="json-property" expanded="1"/>
+																<entry name="updated" type="json-property" expanded="1"/>
+																<entry name="url" type="json-property" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="temp" type="json-property" expanded="1">
+															<entry name="string" outkey="12"/>
+														</entry>
+														<entry name="wind" type="json-property" expanded="1">
+															<entry name="string" outkey="13"/>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="ICAO" type="json-property" expanded="1">
+													<entry name="string" outkey="14"/>
+												</entry>
+												<entry name="city" type="json-property" expanded="1">
+													<entry name="string" outkey="15"/>
+												</entry>
+												<entry name="status" type="json-property" expanded="1">
+													<entry name="object" outkey="16" expanded="1">
+														<entry name="reason" type="json-property" expanded="1">
+															<entry name="string" outkey="17"/>
+														</entry>
+														<entry name="closureBegin" type="json-property" expanded="1">
+															<entry name="string" outkey="18"/>
+														</entry>
+														<entry name="endTime" type="json-property" expanded="1">
+															<entry name="string" outkey="19"/>
+														</entry>
+														<entry name="minDelay" type="json-property" expanded="1">
+															<entry name="string" outkey="20"/>
+														</entry>
+														<entry name="avgDelay" type="json-property" expanded="1">
+															<entry name="string" outkey="21"/>
+														</entry>
+														<entry name="maxDelay" type="json-property" expanded="1">
+															<entry name="string" outkey="22"/>
+														</entry>
+														<entry name="closureEnd" type="json-property" expanded="1">
+															<entry name="string" outkey="23"/>
+														</entry>
+														<entry name="trend" type="json-property" expanded="1">
+															<entry name="string" outkey="24"/>
+														</entry>
+														<entry name="type" type="json-property" expanded="1">
+															<entry name="string" outkey="25"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="call" sourceMode="manual" url="http://services.faa.gov/airport/status/{airportCode}" timeout="40" httpmethod="GET">
+							<parameter name="airportCode" style="template" datatype="string" mappable="1" required="1" description="The three letter airport code for which you wish to retrieve data, e.g., &quot;IAD&quot;"/>
+							<parameter name="Accept" value="application/json" style="header" datatype="string"/>
+						</wsdl>
+					</data>
+				</component>
+				<component name="AirportStatus" library="json" uid="3" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="767" lty="65" rbx="943" rby="439"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="object" inpkey="26" expanded="1">
+											<entry name="delay" type="json-property" expanded="1">
+												<entry name="string" inpkey="27"/>
+											</entry>
+											<entry name="IATA" type="json-property" expanded="1">
+												<entry name="string" inpkey="28"/>
+											</entry>
+											<entry name="state" type="json-property" expanded="1">
+												<entry name="string" inpkey="29"/>
+											</entry>
+											<entry name="name" type="json-property" expanded="1">
+												<entry name="string" inpkey="30"/>
+											</entry>
+											<entry name="weather" type="json-property" expanded="1">
+												<entry name="object" inpkey="31">
+													<entry name="visibility" type="json-property" expanded="1">
+														<entry name="number" inpkey="32"/>
+													</entry>
+													<entry name="weather" type="json-property" expanded="1">
+														<entry name="string" inpkey="83"/>
+													</entry>
+													<entry name="meta" type="json-property" expanded="1">
+														<entry name="object">
+															<entry name="credit" type="json-property" expanded="1"/>
+															<entry name="updated" type="json-property" expanded="1"/>
+															<entry name="url" type="json-property" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="temp" type="json-property" expanded="1">
+														<entry name="string" inpkey="37"/>
+													</entry>
+													<entry name="wind" type="json-property" expanded="1">
+														<entry name="string" inpkey="38"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="ICAO" type="json-property" expanded="1">
+												<entry name="string" inpkey="39"/>
+											</entry>
+											<entry name="city" type="json-property" expanded="1">
+												<entry name="string" inpkey="40"/>
+											</entry>
+											<entry name="status" type="json-property" expanded="1">
+												<entry name="object" inpkey="41" expanded="1">
+													<entry name="reason" type="json-property" expanded="1">
+														<entry name="string" inpkey="42"/>
+													</entry>
+													<entry name="closureBegin" type="json-property" expanded="1">
+														<entry name="string" inpkey="43"/>
+													</entry>
+													<entry name="endTime" type="json-property" expanded="1">
+														<entry name="string" inpkey="44"/>
+													</entry>
+													<entry name="minDelay" type="json-property" expanded="1">
+														<entry name="string" inpkey="45"/>
+													</entry>
+													<entry name="avgDelay" type="json-property" expanded="1">
+														<entry name="string" inpkey="46"/>
+													</entry>
+													<entry name="maxDelay" type="json-property" expanded="1">
+														<entry name="string" inpkey="47"/>
+													</entry>
+													<entry name="closureEnd" type="json-property" expanded="1">
+														<entry name="string" inpkey="48"/>
+													</entry>
+													<entry name="trend" type="json-property" expanded="1">
+														<entry name="string" inpkey="49"/>
+													</entry>
+													<entry name="type" type="json-property" expanded="1">
+														<entry name="string" inpkey="50"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<json schema="AirportStatus.schema.json"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="26" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="27" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="28" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="29" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="30" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="31" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="32" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="37" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="38" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="39" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="40" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="41" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="42" edgekey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="43" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="44" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="45" edgekey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="46" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="47" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="48" edgekey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="49" edgekey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="50" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77">
+						<edges>
+							<edge vertexkey="78" edgekey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="76" edgekey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="83" edgekey="84"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

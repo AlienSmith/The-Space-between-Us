@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Addresses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Addresses.xsd">
+	<Address>
+		<FirstName>Marquita</FirstName>
+		<LastName>Bailey</LastName>
+		<City>Bridgedell</City>
+		<Street>Olive Street</Street>
+		<Number>4</Number>
+	</Address>
+	<Address>
+		<FirstName>Totie</FirstName>
+		<LastName>Rea</LastName>
+		<City>Roseford</City>
+		<Street>Evergreen Lane</Street>
+		<Number>34</Number>
+	</Address>
+	<Address>
+		<FirstName>Mark</FirstName>
+		<LastName>Marzolla</LastName>
+		<City>Elfville</City>
+		<Street>Creek Road</Street>
+		<Number>3</Number>
+	</Address>
+</Addresses>

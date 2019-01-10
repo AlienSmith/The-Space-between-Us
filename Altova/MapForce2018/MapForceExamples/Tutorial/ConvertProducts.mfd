@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="ProductValuePairs" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="307" rbx="506" rby="199"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="products" expanded="1">
+										<entry name="product" inpkey="2" expanded="1">
+											<entry name="attribute" inpkey="3" expanded="1">
+												<entry name="name" type="attribute" inpkey="4"/>
+												<entry name="value" type="attribute" inpkey="5"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ProductValuePairs.xsd" outputinstance="ProductValuePairs.xml" instanceroot="{}products"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Products" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="208" rby="199"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="products" ns="1" expanded="1">
+										<entry name="product" ns="1" outkey="7" expanded="1" use-generic-elements="1">
+											<entry name="element()" outkey="30" expanded="1" show-schema-children="0">
+												<typeselections>
+													<type>
+														<entry name="text()" type="xml-type"/>
+													</type>
+												</typeselections>
+												<entry name="NodeName" outkey="31"/>
+												<entry name="#text" type="xml-type" outkey="32"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Products.xsd" inputinstance="Products.xml" instanceroot="{}products"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="33">
+						<data>
+							<dataconnection name="A"/>
+						</data>
+					</edge>
+					<edge edgekey="34">
+						<data>
+							<dataconnection name="B"/>
+						</data>
+					</edge>
+					<edge edgekey="35">
+						<data>
+							<dataconnection name="C"/>
+						</data>
+					</edge>
+					<edge edgekey="36">
+						<data>
+							<dataconnection name="D"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="2" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="3" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="4" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="5" edgekey="36"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

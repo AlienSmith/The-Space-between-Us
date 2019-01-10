@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties ShowAnnotations="0" SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Altova_Hierarchical" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="35" lty="-2" rbx="323" rby="470"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Altova" outkey="120" expanded="1">
+										<entry name="Name" outkey="5"/>
+										<entry name="Office" outkey="6" expanded="1">
+											<entry name="Desc" outkey="7"/>
+											<entry name="EMail" outkey="8"/>
+											<entry name="Established" outkey="9"/>
+											<entry name="Fax" outkey="10"/>
+											<entry name="Name" outkey="11"/>
+											<entry name="Phone" outkey="12"/>
+											<entry name="Address">
+												<entry name="city" outkey="14"/>
+												<entry name="state" outkey="15"/>
+												<entry name="street" outkey="16"/>
+												<entry name="zip" outkey="170"/>
+											</entry>
+											<entry name="Department" outkey="18" expanded="1">
+												<entry name="Name" outkey="19"/>
+												<entry name="Person" outkey="81" expanded="1">
+													<entry name="EMail" outkey="82"/>
+													<entry name="First" outkey="83"/>
+													<entry name="Last" outkey="84"/>
+													<entry name="PhoneExt" outkey="118"/>
+													<entry name="Title" outkey="85"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Altova_Hierarchical.xsd" inputinstance="Altova_Hierarchical.xml" outputinstance="Altova_Hierarchical.xml" instanceroot="{}Altova"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Altova_Hierarchical" library="json" uid="2" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="667" lty="-2" rbx="945" rby="417"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="object" inpkey="121" expanded="1">
+											<entry name="Name" type="json-property" expanded="1">
+												<entry name="string" inpkey="122"/>
+											</entry>
+											<entry name="Office" type="json-property" expanded="1">
+												<entry name="array" expanded="1">
+													<entry name="item" type="json-item" expanded="1">
+														<entry name="object" inpkey="123" expanded="1">
+															<entry name="Desc" type="json-property" expanded="1">
+																<entry name="string" inpkey="124"/>
+															</entry>
+															<entry name="EMail" type="json-property" expanded="1">
+																<entry name="string" inpkey="125"/>
+															</entry>
+															<entry name="Established" type="json-property" expanded="1">
+																<entry name="string" inpkey="126"/>
+															</entry>
+															<entry name="Fax" type="json-property" expanded="1">
+																<entry name="string" inpkey="127"/>
+															</entry>
+															<entry name="Name" type="json-property" expanded="1">
+																<entry name="string" inpkey="128"/>
+															</entry>
+															<entry name="Phone" type="json-property" expanded="1">
+																<entry name="string" inpkey="129"/>
+															</entry>
+															<entry name="Address" type="json-property" expanded="1">
+																<entry name="object">
+																	<entry name="city" type="json-property" expanded="1">
+																		<entry name="string" inpkey="130"/>
+																	</entry>
+																	<entry name="state" type="json-property" expanded="1">
+																		<entry name="string" inpkey="131"/>
+																	</entry>
+																	<entry name="street" type="json-property" expanded="1">
+																		<entry name="string" inpkey="132"/>
+																	</entry>
+																	<entry name="zip" type="json-property" expanded="1">
+																		<entry name="string" inpkey="169"/>
+																	</entry>
+																</entry>
+															</entry>
+															<entry name="Department" type="json-property" expanded="1">
+																<entry name="array" expanded="1">
+																	<entry name="item" type="json-item" expanded="1">
+																		<entry name="object" inpkey="133" expanded="1">
+																			<entry name="Name" type="json-property" expanded="1">
+																				<entry name="string" inpkey="134"/>
+																			</entry>
+																			<entry name="Person" type="json-property" expanded="1">
+																				<entry name="array" expanded="1">
+																					<entry name="item" type="json-item" expanded="1">
+																						<entry name="object" inpkey="135" expanded="1">
+																							<entry name="EMail" type="json-property" expanded="1">
+																								<entry name="string" inpkey="136"/>
+																							</entry>
+																							<entry name="First" type="json-property" expanded="1">
+																								<entry name="string" inpkey="137"/>
+																							</entry>
+																							<entry name="Last" type="json-property" expanded="1">
+																								<entry name="string" inpkey="138"/>
+																							</entry>
+																							<entry name="PhoneExt" type="json-property" expanded="1">
+																								<entry name="number" inpkey="139"/>
+																							</entry>
+																							<entry name="Title" type="json-property" expanded="1">
+																								<entry name="string" inpkey="140"/>
+																							</entry>
+																						</entry>
+																					</entry>
+																				</entry>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<json schema="Altova_Hierarchical.schema.json"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="122" edgekey="145"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="123" edgekey="146"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="124" edgekey="147"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="125" edgekey="148"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="126" edgekey="149"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="127" edgekey="150"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="128" edgekey="151"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="129" edgekey="152"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="130" edgekey="153"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="131" edgekey="154"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="132" edgekey="155"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="133" edgekey="156"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="134" edgekey="157"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81">
+						<edges>
+							<edge vertexkey="135" edgekey="158"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="136" edgekey="159"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83">
+						<edges>
+							<edge vertexkey="137" edgekey="160"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84">
+						<edges>
+							<edge vertexkey="138" edgekey="161"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="85">
+						<edges>
+							<edge vertexkey="140" edgekey="162"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="118">
+						<edges>
+							<edge vertexkey="139" edgekey="167"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="120">
+						<edges>
+							<edge vertexkey="121" edgekey="168"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="170">
+						<edges>
+							<edge vertexkey="169" edgekey="171"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

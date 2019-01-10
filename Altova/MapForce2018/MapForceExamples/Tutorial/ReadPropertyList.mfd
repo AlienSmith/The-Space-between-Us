@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="8" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="233" lty="234" rbx="300" rby="252"/>
+					<data>
+						<constant value="string" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="filter" library="core" uid="5" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="10"/>
+						<datapoint pos="1" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+						<datapoint/>
+					</targets>
+					<view ltx="438" rbx="541" rby="56"/>
+				</component>
+				<component name="FilteredKeyValuePairs" library="text" uid="3" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="594" rbx="784" rby="89"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" inpkey="33" expanded="1">
+										<entry name="Key" inpkey="34"/>
+										<entry name="Value" inpkey="35"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" outputinstance="FilteredKeyValuePairs.txt" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Key" type="string"/>
+									<field1 name="Value" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="exists" library="core" uid="7" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="251" lty="116" rbx="318" rby="155"/>
+				</component>
+				<component name="group-starting-with" library="core" uid="12" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="262" rbx="382" rby="56"/>
+				</component>
+				<component name="equal" library="core" uid="10" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="16"/>
+						<datapoint pos="1" key="17"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="329" lty="186" rbx="382" rby="242"/>
+				</component>
+				<component name="plist" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="204" rby="439"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="plist" ns="1" expanded="1">
+										<entry name="dict" ns="1" expanded="1" use-generic-elements="1" show-schema-children="0">
+											<entry name="element()" outkey="46" expanded="1">
+												<typeselections/>
+												<entry name="LocalName" outkey="39"/>
+												<entry name="key" ns="1" outkey="40"/>
+												<entry name="string" ns="1" outkey="41"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="plist.dtd" inputinstance="plist.xml" outputinstance="plist.xml" instanceroot="{}plist"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="8" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="10" edgekey="26"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="33" edgekey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="11" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="17" edgekey="29"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="16" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="34" edgekey="43"/>
+							<edge vertexkey="5" edgekey="44"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="35" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="7" edgekey="47"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

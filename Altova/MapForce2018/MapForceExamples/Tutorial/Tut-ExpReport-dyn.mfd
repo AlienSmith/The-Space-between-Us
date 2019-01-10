@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap2" blackbox="0" uid="65048328" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="auto-number" library="core" uid="65912601" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="34"/>
+					</targets>
+					<view ltx="82" lty="-64" rbx="213" rby="26"/>
+				</component>
+				<component name="concat" library="core" uid="40328600" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="35"/>
+						<datapoint pos="2" key="56"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="229" lty="8" rbx="314" rby="84"/>
+				</component>
+				<component name="ExpReport-Target" library="xml" uid="50115216" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="346" lty="-1" rbx="503" rby="363"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://my-company.com/namespace"/>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" inpkey="29" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Company" inpkey="11" expanded="1">
+										<entry name="Employee" inpkey="20" expanded="1">
+											<entry name="Title" inpkey="2" expanded="1"/>
+											<entry name="Name" inpkey="58" expanded="1"/>
+											<entry name="Tel." inpkey="41" expanded="1"/>
+											<entry name="Email" inpkey="23" expanded="1"/>
+											<entry name="DomesticDailyRate" expanded="1"/>
+											<entry name="ForeignDailyRate" expanded="1"/>
+											<entry name="Expense-detail" expanded="1"/>
+											<entry name="expense-item" inpkey="17" expanded="1">
+												<entry name="Currency" ns="1" type="attribute" inpkey="47" expanded="1"/>
+												<entry name="Bill-to" ns="1" type="attribute" inpkey="8" expanded="1"/>
+												<entry name="Date" inpkey="50" expanded="1"/>
+												<entry name="Travel" inpkey="26">
+													<entry name="Travel-Cost" ns="1" type="attribute" inpkey="53" expanded="1"/>
+													<entry name="Destination" inpkey="14" expanded="1"/>
+													<entry name="Car-Rental" expanded="1"/>
+													<entry name="Air-Travel" expanded="1"/>
+													<entry name="Misc-Travel" expanded="1"/>
+												</entry>
+												<entry name="Accommodation">
+													<entry name="DomesticAcc">
+														<entry name="DomesticAcc-Cost" ns="1" type="attribute" expanded="1"/>
+														<entry name="Location" expanded="1"/>
+														<entry name="Hotel" expanded="1"/>
+													</entry>
+													<entry name="ForeignAcc" expanded="1">
+														<entry name="ForeignAcc-Cost" ns="1" type="attribute" expanded="1"/>
+														<entry name="Location" expanded="1"/>
+														<entry name="Hotel" expanded="1"/>
+													</entry>
+												</entry>
+												<entry name="Entertainment" inpkey="44">
+													<entry name="Entertainment-Cost" ns="1" type="attribute" expanded="1"/>
+													<entry name="Client-Name" expanded="1"/>
+													<entry name="Restaurant" expanded="1"/>
+													<entry name="Gifts" expanded="1"/>
+												</entry>
+												<entry name="Misc" inpkey="32">
+													<entry name="MiscExpense-Cost" ns="1" type="attribute" expanded="1"/>
+												</entry>
+												<entry name="description" inpkey="38">
+													<entry name="strong" expanded="1">
+														<entry name="italic" expanded="1"/>
+													</entry>
+													<entry name="italic" expanded="1">
+														<entry name="strong" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="CashAdvance">
+												<entry name="CashAdvance-Domestic" ns="1" type="attribute" expanded="1"/>
+												<entry name="CashAdvance-Foreign" ns="1" type="attribute" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="Exec">
+											<entry name="Title" expanded="1"/>
+											<entry name="Name" expanded="1"/>
+											<entry name="Tel." expanded="1"/>
+											<entry name="Email" expanded="1"/>
+											<entry name="DomesticDailyRate" expanded="1"/>
+											<entry name="ForeignDailyRate" expanded="1"/>
+											<entry name="Expense-detail" expanded="1"/>
+											<entry name="expense-item" expanded="1">
+												<entry name="Currency" ns="1" type="attribute" expanded="1"/>
+												<entry name="Bill-to" ns="1" type="attribute" expanded="1"/>
+												<entry name="Date" expanded="1"/>
+												<entry name="Travel" expanded="1">
+													<entry name="Travel-Cost" ns="1" type="attribute" expanded="1"/>
+													<entry name="Destination" expanded="1"/>
+													<entry name="Car-Rental" expanded="1"/>
+													<entry name="Air-Travel" expanded="1"/>
+													<entry name="Misc-Travel" expanded="1"/>
+												</entry>
+												<entry name="Accommodation" expanded="1">
+													<entry name="DomesticAcc" expanded="1">
+														<entry name="DomesticAcc-Cost" ns="1" type="attribute" expanded="1"/>
+														<entry name="Location" expanded="1"/>
+														<entry name="Hotel" expanded="1"/>
+													</entry>
+													<entry name="ForeignAcc" expanded="1">
+														<entry name="ForeignAcc-Cost" ns="1" type="attribute" expanded="1"/>
+														<entry name="Location" expanded="1"/>
+														<entry name="Hotel" expanded="1"/>
+													</entry>
+												</entry>
+												<entry name="Entertainment" expanded="1">
+													<entry name="Entertainment-Cost" ns="1" type="attribute" expanded="1"/>
+													<entry name="Client-Name" expanded="1"/>
+													<entry name="Restaurant" expanded="1"/>
+													<entry name="Gifts" expanded="1"/>
+												</entry>
+												<entry name="Misc" expanded="1">
+													<entry name="MiscExpense-Cost" ns="1" type="attribute" expanded="1"/>
+												</entry>
+												<entry name="description" expanded="1">
+													<entry name="strong" expanded="1">
+														<entry name="italic" expanded="1"/>
+													</entry>
+													<entry name="italic" expanded="1">
+														<entry name="strong" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="CashAdvance" expanded="1">
+												<entry name="CashAdvance-Domestic" ns="1" type="attribute" expanded="1"/>
+												<entry name="CashAdvance-Foreign" ns="1" type="attribute" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ExpReport-Target.xsd" instanceroot="{http://my-company.com/namespace}Company" userdefinedschemalocation="ExpReport-Target.xsd"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="65912600" kind="2">
+					<targets>
+						<datapoint pos="0" key="55"/>
+					</targets>
+					<view ltx="178" lty="124" rbx="237" rby="142"/>
+					<data>
+						<constant value=".xml" datatype="string"/>
+					</data>
+				</component>
+				<component name="mf-ExpReport" library="xml" uid="50114920" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="9" rbx="160" rby="368"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="expense-report" outkey="10" expanded="1">
+										<entry name="detailed" type="attribute" expanded="1"/>
+										<entry name="currency" type="attribute" outkey="46" expanded="1"/>
+										<entry name="Person" outkey="19" expanded="1">
+											<entry name="First" expanded="1"/>
+											<entry name="Last" outkey="59" expanded="1"/>
+											<entry name="Title" outkey="1" expanded="1"/>
+											<entry name="Phone" outkey="40" expanded="1"/>
+											<entry name="Email" outkey="22" expanded="1"/>
+										</entry>
+										<entry name="expense-item" outkey="16" expanded="1">
+											<entry name="type" type="attribute" outkey="4" expanded="1"/>
+											<entry name="expto" type="attribute" outkey="7" expanded="1"/>
+											<entry name="Date" outkey="49" expanded="1"/>
+											<entry name="Meal">
+												<entry name="mealtype" type="attribute" expanded="1"/>
+												<entry name="Name" expanded="1"/>
+												<entry name="Location" expanded="1"/>
+											</entry>
+											<entry name="Lodging">
+												<entry name="Lodge-cost" type="attribute" expanded="1"/>
+												<entry name="Name" expanded="1"/>
+												<entry name="Location" expanded="1"/>
+											</entry>
+											<entry name="Travel" outkey="25">
+												<entry name="means" type="attribute" expanded="1"/>
+												<entry name="Trav-cost" type="attribute" outkey="52" expanded="1"/>
+												<entry name="Destination" outkey="13" expanded="1"/>
+												<entry name="Mileage" expanded="1"/>
+											</entry>
+											<entry name="Parking">
+												<entry name="Location" expanded="1"/>
+											</entry>
+											<entry name="Entertainment" outkey="43">
+												<entry name="Client-name" expanded="1"/>
+											</entry>
+											<entry name="Misc" outkey="31">
+												<entry name="misctype" type="attribute" expanded="1"/>
+											</entry>
+											<entry name="description" outkey="37">
+												<entry name="strong" expanded="1">
+													<entry name="italic" expanded="1"/>
+												</entry>
+												<entry name="italic" expanded="1">
+													<entry name="strong" expanded="1"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="mf-ExpReport.xsd" inputinstance="mf-ExpReport.xml" outputinstance="mf-ExpReport.xml" instanceroot="{}expense-report" userdefinedschemalocation="mf-ExpReport.xsd"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="11" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="17" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="20" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="23" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="26" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="29" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="32" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="35" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="38" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="41" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="44" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="47" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="50" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="53" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="56" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="59">
+						<edges>
+							<edge vertexkey="58" edgekey="60"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

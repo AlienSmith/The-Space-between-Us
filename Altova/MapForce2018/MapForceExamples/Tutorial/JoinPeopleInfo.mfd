@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="30">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="PeopleInfo" library="xml" uid="5" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="469" lty="52" rbx="670" rby="236"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="PeopleInfo" expanded="1">
+										<entry name="Row" inpkey="49" expanded="1">
+											<entry name="FirstName" inpkey="50"/>
+											<entry name="LastName" inpkey="51"/>
+											<entry name="City" inpkey="52"/>
+											<entry name="Street" inpkey="53"/>
+											<entry name="Number" inpkey="54"/>
+											<entry name="Email" inpkey="55"/>
+											<entry name="Phone" inpkey="56"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="PeopleInfo.xsd" outputinstance="PeopleInfo.xml" instanceroot="{}PeopleInfo"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="People" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-4" lty="2" rbx="172" rby="148"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="People" expanded="1">
+										<entry name="Person" outkey="1" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="People.xsd" inputinstance="People.xml" outputinstance="People.xml" instanceroot="{}People"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Addresses" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-4" lty="184" rbx="172" rby="330"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Addresses" expanded="1">
+										<entry name="Address" outkey="2" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Addresses.xsd" inputinstance="Addresses.xml" outputinstance="Addresses.xml" instanceroot="{}Addresses"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="join" library="core" uid="6" kind="32">
+					<properties/>
+					<view ltx="244" lty="35" rbx="393" rby="283"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="tuple" ns="1" outkey="65" expanded="1">
+									<entry name="dynamic_tree_node0" ns="1" expanded="1">
+										<entry name="Person" inpkey="66" expanded="1">
+											<entry name="FirstName" outkey="67"/>
+											<entry name="LastName" outkey="68"/>
+											<entry name="Email" outkey="69"/>
+											<entry name="Phone" outkey="70"/>
+										</entry>
+									</entry>
+									<entry name="dynamic_tree_node1" ns="1" expanded="1">
+										<entry name="Address" inpkey="71" expanded="1">
+											<entry name="City" outkey="72"/>
+											<entry name="Street" outkey="73"/>
+											<entry name="Number" outkey="74"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<join>
+							<joinkeys>
+								<keypair>
+									<first-key path-id="1"/>
+									<second-key path-id="1"/>
+								</keypair>
+								<keypair>
+									<first-key path-id="2"/>
+									<second-key path-id="2"/>
+								</keypair>
+							</joinkeys>
+							<keypaths>
+								<header>
+									<namespaces>
+										<namespace/>
+									</namespaces>
+								</header>
+								<entry>
+									<condition/>
+									<entry name="FirstName" outkey="1">
+										<condition/>
+									</entry>
+									<entry name="LastName" outkey="2">
+										<condition/>
+									</entry>
+								</entry>
+							</keypaths>
+						</join>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="75">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="76">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="66" edgekey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="71" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="49" edgekey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="67">
+						<edges>
+							<edge vertexkey="50" edgekey="78"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="68">
+						<edges>
+							<edge vertexkey="51" edgekey="79"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="69">
+						<edges>
+							<edge vertexkey="55" edgekey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="70">
+						<edges>
+							<edge vertexkey="56" edgekey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72">
+						<edges>
+							<edge vertexkey="52" edgekey="82"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="73">
+						<edges>
+							<edge vertexkey="53" edgekey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="74">
+						<edges>
+							<edge vertexkey="54" edgekey="84"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp1 (x64) (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:rfq="http://www.altova.com/RFQ" targetNamespace="http://www.altova.com/RFQ" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<annotation>
+		<documentation>
+   Request for quote schema for Example.com
+   Copyright 2013 Example.com. All rights reserved.
+  </documentation>
+	</annotation>
+	<element name="requestForQuote" type="rfq:RequestForQuote">
+		<annotation>
+			<documentation>Request for quote message</documentation>
+		</annotation>
+	</element>
+	<element name="comment" type="string"/>
+	<complexType name="RequestForQuote">
+		<sequence>
+			<element name="requestDate" type="date"/>
+			<element name="contact" type="string"/>
+			<element name="company" type="string"/>
+			<element name="bindingPeriod" type="date"/>
+			<element name="deliveryTerm" type="string"/>
+			<element name="paymentTerm" type="string"/>
+			<element ref="rfq:Items"/>
+		</sequence>
+	</complexType>
+	<complexType name="Items">
+		<sequence>
+			<element name="item" minOccurs="0" maxOccurs="unbounded">
+				<complexType>
+					<sequence>
+						<element name="productName" type="string"/>
+						<element name="quantity" type="integer"/>
+					</sequence>
+					<attribute name="partNum" type="rfq:Sku" use="required"/>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<simpleType name="Sku">
+		<restriction base="string">
+			<pattern value="\d{3}-[A-Z]{2}"/>
+		</restriction>
+	</simpleType>
+	<element name="requests">
+		<complexType>
+			<sequence>
+				<element ref="rfq:requestForQuote" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Items" type="rfq:Items"/>
+</schema>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expense-report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ExpReport.xsd" currency="USD" detailed="false" total-sum="556.9">
+	<Person>
+		<First>Fred</First>
+		<Last>Landis</Last>
+		<Title>Project Manager</Title>
+		<Phone>123-456-7890</Phone>
+		<Email>f.landis@nanonull.com</Email>
+	</Person>
+	<expense-item type="Meal" expto="Marketing">
+		<Date>2003-01-01</Date>
+		<expense>122.11</expense>
+	</expense-item>
+	<expense-item type="Lodging" expto="Development">
+		<Date>2003-01-14</Date>
+		<expense>122.12</expense>
+	</expense-item>
+	<expense-item type="Lodging" expto="Marketing">
+		<Date>2003-01-21</Date>
+		<expense>299.45</expense>
+	</expense-item>
+	<expense-item type="Entertainment" expto="Sales">
+		<Date>2003-01-09</Date>
+		<expense>13.22</expense>
+	</expense-item>
+</expense-report>

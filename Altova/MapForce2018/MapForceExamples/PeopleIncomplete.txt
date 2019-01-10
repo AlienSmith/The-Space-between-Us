@@ -1,0 +1,9 @@
+Company,Department,First,Last,Title,EMail,Shares,LeaveTotal,UsedTotal,LeftTotal
+"Nanonull, Inc.",Administration,Vernon,Callaby,Office Manager,v.callaby@nanonull.com,1500,25,4,N/A
+"Nanonull, Inc.",N/A,Frank,Further,N/A,N/A,N/A,N/A,N/A,N/A
+"Nanonull, Inc.",N/A,Loby,Matise,Accounting Manager,l.matise@nanonull.com,N/A,N/A,N/A,N/A
+"Nanonull, Inc.",Marketing,Joe,Martin,Marketing Manager Europe,j.martin@nanonull.com,2000,30,14,N/A
+"Nanonull, Inc.",N/A,Susi,Sanna,Art Director,N/A,N/A,N/A,N/A,N/A
+"Nanonull, Inc.",Engineering,Fred,Landis,Program Manager,f.landis@nanonull.com,N/A,28,N/A,N/A
+"Nanonull, Inc.",N/A,Michelle,Butler,Software Engineer,m.butler@nanonull.com,1500,19,9,N/A
+"Nanonull, Inc.",Engineering,N/A,Little,N/A,N/A,N/A,N/A,N/A,N/A

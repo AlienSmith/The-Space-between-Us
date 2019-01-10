@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2018r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="31">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Order" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="228" rby="296"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Order" expanded="1">
+										<entry name="Customer" expanded="1">
+											<entry name="CompanyName" outkey="7"/>
+										</entry>
+										<entry name="LineItems" expanded="1">
+											<entry name="LineItem" expanded="1">
+												<entry name="Article" outkey="8" expanded="1">
+													<outputnodefunctions>
+														<rule applyto="descendants">
+															<function name="7C74C0F1-1450-4B5F-9070-ACDB095EDED4"/>
+															<filter datatype="string"/>
+														</rule>
+														<rule applyto="descendants">
+															<function name="9544F63A-340C-4FC4-966F-2E0095D26DD8"/>
+															<filter datatype="decimal"/>
+														</rule>
+													</outputnodefunctions>
+													<entry name="Name" outkey="9"/>
+													<entry name="SinglePrice" outkey="10"/>
+													<entry name="Amount" outkey="11">
+														<outputnodefunctions inherit="block"/>
+													</entry>
+													<entry name="Price" outkey="12"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Order.xsd" inputinstance="OrdersSource.xml" outputinstance="OrdersSource.xml" instanceroot="{}Order"/>
+					</data>
+				</component>
+				<component name="OrderInUSD" library="text" uid="3" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="553" rbx="749" rby="137"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" inpkey="1" expanded="1">
+										<inputnodefunctions>
+											<rule applyto="descendants">
+												<function name="C801090D-6536-463E-B9C3-8C67EC555C1A"/>
+												<filter datatype="string"/>
+											</rule>
+										</inputnodefunctions>
+										<entry name="Company" inpkey="2">
+											<inputnodefunctions inherit="block"/>
+										</entry>
+										<entry name="Article" inpkey="3">
+											<inputnodefunctions inherit="block"/>
+										</entry>
+										<entry name="SinglePrice" inpkey="4"/>
+										<entry name="Amount" inpkey="5"/>
+										<entry name="Price" inpkey="6"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Company" type="string"/>
+									<field1 name="Article" type="string"/>
+									<field2 name="SinglePrice" type="string"/>
+									<field3 name="Amount" type="integer"/>
+									<field4 name="Price" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="8" to="1"/>
+			<edge from="7" to="2"/>
+			<edge from="9" to="3"/>
+			<edge from="10" to="4"/>
+			<edge from="11" to="5"/>
+			<edge from="12" to="6"/>
+		</connections>
+	</component>
+	<component name="7C74C0F1-1450-4B5F-9070-ACDB095EDED4" library="mapforce_nodefunction" uid="4" editable="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="6" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="800" rbx="857" rby="38"/>
+					<data>
+						<output datatype="anySimpleType"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="raw_value" library="core" uid="5" kind="6">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view rbx="78" rby="38"/>
+					<data>
+						<input datatype="anySimpleType"/>
+						<parameter usageKind="input" name="raw_value"/>
+					</data>
+				</component>
+				<component name="uppercase" library="lang" uid="7" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="226" rbx="306" rby="38"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="4" to="1"/>
+			<edge from="2" to="3"/>
+		</connections>
+	</component>
+	<component name="9544F63A-340C-4FC4-966F-2E0095D26DD8" library="mapforce_nodefunction" uid="8" editable="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="10" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="800" rbx="867" rby="48"/>
+					<data>
+						<output datatype="anySimpleType"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="raw_value" library="core" uid="9" kind="6">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view rbx="92" rby="48"/>
+					<data>
+						<input datatype="anySimpleType"/>
+						<parameter usageKind="input" name="raw_value"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="129" lty="77" rbx="194" rby="100"/>
+					<data>
+						<constant value="1.25" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="11" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="4"/>
+						<datapoint pos="1" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="286" rbx="378" rby="72"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="6" to="1"/>
+			<edge from="2" to="4"/>
+			<edge from="3" to="5"/>
+		</connections>
+	</component>
+	<component name="C801090D-6536-463E-B9C3-8C67EC555C1A" library="mapforce_nodefunction" uid="25" editable="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="27" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="800" rbx="867" rby="48"/>
+					<data>
+						<output datatype="anySimpleType"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="raw_value" library="core" uid="26" kind="6">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view rbx="92" rby="48"/>
+					<data>
+						<input datatype="anySimpleType"/>
+						<parameter usageKind="input" name="raw_value"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="30" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="165" lty="20" rbx="221" rby="43"/>
+					<data>
+						<constant value="$" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="29" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="4"/>
+						<datapoint pos="1" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="285" lty="20" rbx="377" rby="92"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="6" to="1"/>
+			<edge from="3" to="4"/>
+			<edge from="2" to="5"/>
+		</connections>
+	</component>
+</mapping>

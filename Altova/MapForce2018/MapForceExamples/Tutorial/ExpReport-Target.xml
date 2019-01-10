@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://my-company.com/namespace ExpReport-Target.xsd" xmlns="http://my-company.com/namespace">
+	<Employee>
+		<Title>Project Manager</Title>
+		<Name>Fred Landis</Name>
+		<Tel.>123-456-78</Tel.>
+		<Email>f.landis@nanonull.com</Email>
+		<expense-item Currency="USD" Bill-to="Development">
+			<Date>2003-01-02</Date>
+			<Travel Travel-Cost="337.88"/>
+		</expense-item>
+		<expense-item Currency="USD" Bill-to="Accounting">
+			<Date>2003-07-07</Date>
+			<Travel Travel-Cost="1014.22"/>
+		</expense-item>
+		<expense-item Currency="USD" Bill-to="Marketing">
+			<Date>2003-02-02</Date>
+			<Travel Travel-Cost="2000"/>
+		</expense-item>
+	</Employee>
+</Company>

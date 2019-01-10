@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="10">
+	<component name="defaultmap1" blackbox="0" uid="85586368" editable="1">
+		<properties ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="java" WSDLFile="TimeService.wsdl" WSDLService="{http://www.Nanonull.com/TimeService/}TimeService" WSDLPort="TimeServiceSoap" WSDLOperation="{http://www.Nanonull.com/TimeService/}getTimeZoneTime"/>
+		<structure>
+			<children>
+				<component name="wsdl" library="wsdl" uid="87480272" kind="17" visible="0">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="607" lty="100" rbx="873" rby="172"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="getTimeZoneTimeSoapOut" expanded="1">
+								<entry name="parameters" ns="1" inpkey="179240880" expanded="1">
+									<entry name="getTimeZoneTimeResult" inpkey="179240456"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="output"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="85371272" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="179198104"/>
+						<datapoint pos="1" key="179198536"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="179199040"/>
+					</targets>
+					<view ltx="346" lty="178" rbx="38" rby="-64"/>
+				</component>
+				<component name="now" library="lang" uid="73884752" kind="5">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="179200904"/>
+					</targets>
+					<view ltx="482" lty="186" rbx="-17" rby="-25"/>
+				</component>
+				<component name="constant" library="core" uid="74018408" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="179203048"/>
+					</targets>
+					<view ltx="244" lty="220" rbx="-233" rby="26"/>
+					<data>
+						<constant value="UTC" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="part: parameters" library="core" uid="74210872" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="179205272"/>
+						<datapoint pos="1" key="179205776"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="179206280"/>
+						<datapoint pos="1" key="179206712"/>
+					</targets>
+					<view ltx="429" lty="118" rbx="-48" rby="-76"/>
+				</component>
+				<component name="constant" library="core" uid="70966728" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="179208832"/>
+					</targets>
+					<view ltx="372" lty="267" rbx="-105" rby="73"/>
+					<data>
+						<constant value="Timezone not implemented!" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="WSDL" library="wsdl" uid="85157240" kind="17">
+					<properties/>
+					<view ltx="608" lty="211" rbx="872" rby="289"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="errorSoapOut" inpkey="179268512" expanded="1">
+								<entry name="Error" ns="1" expanded="1">
+									<entry name="errorText" inpkey="179269080"/>
+									<entry name="errorItem" inpkey="179269648"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl kind="fault" faultName="{http://www.Nanonull.com/TimeService/}errorSoapOut"/>
+					</data>
+				</component>
+				<component name="wsdl" library="wsdl" uid="74102040" kind="17" visible="0">
+					<view ltx="60" lty="100" rbx="298" rby="170"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.Nanonull.com/TimeService/"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="getTimeZoneTimeSoapIn" expanded="1">
+								<entry name="parameters" ns="1" outkey="179274312" expanded="1">
+									<entry name="timezone" outkey="179274968"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl previewRequestInstanceFile="getTimeZoneTimeRequest.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="179199040">
+						<edges>
+							<edge vertexkey="179205776" edgekey="179280576"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179200904">
+						<edges>
+							<edge vertexkey="179240456" edgekey="179279688"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179203048">
+						<edges>
+							<edge vertexkey="179198536" edgekey="179279392"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179206280">
+						<edges>
+							<edge vertexkey="179240880" edgekey="179279984"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179206712">
+						<edges>
+							<edge vertexkey="179268512" edgekey="179281464"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179208832">
+						<edges>
+							<edge vertexkey="179269080" edgekey="179281168"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179274312">
+						<edges>
+							<edge vertexkey="179205272" edgekey="179280280"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179274968">
+						<edges>
+							<edge vertexkey="179198104" edgekey="179279184"/>
+							<edge vertexkey="179269648" edgekey="179280872"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

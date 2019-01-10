@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap2" blackbox="0" uid="70504912" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="80935593" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="38"/>
+					</targets>
+					<view ltx="572" lty="334" rbx="631" rby="352"/>
+					<data>
+						<constant value=".xml" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="80935607" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="89"/>
+					</targets>
+					<view ltx="84" lty="37" rbx="122" rby="55"/>
+					<data>
+						<constant value="3" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="size" library="core" uid="80935597" kind="6">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="88"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="78"/>
+					</targets>
+					<view ltx="165" lty="16" rbx="234" rby="55"/>
+					<data>
+						<input datatype="positiveInteger"/>
+						<wsdl/>
+						<parameter usageKind="input" name="size" optional="1"/>
+					</data>
+				</component>
+				<component name="position" library="core" uid="80935616" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="113"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="114"/>
+					</targets>
+					<view ltx="564" lty="269" rbx="631" rby="308"/>
+				</component>
+				<component name="Altova_Hierarchical" library="xml" uid="80935577" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="24" lty="85" rbx="224" rby="536"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Altova" expanded="1">
+										<entry name="Office" expanded="1">
+											<entry name="Department" outkey="168" expanded="1">
+												<entry name="Name" outkey="169"/>
+												<entry name="Person" outkey="5" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Altova_Hierarchical.xsd" inputinstance="Altova_Hierarchical.xml" instanceroot="{}Altova"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="PersonList" library="xml" uid="80935578" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="1078" lty="269" rbx="1267" rby="405"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" inpkey="159" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="PersonList" expanded="1">
+										<entry name="Person" inpkey="170" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="PersonList.xsd" instanceroot="{}PersonList" sps="PersonList.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="80935627" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="833" lty="207" rbx="984" rby="483"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="parent-context" ns="1" type="parent-context" inpkey="260" expanded="1">
+								<entry name="parent-context" ns="1" type="parent-context" inpkey="261" expanded="1">
+									<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+										<entry name="Department" expanded="1">
+											<entry name="Name" inpkey="262" outkey="263"/>
+											<entry name="Person" inpkey="264" outkey="265" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Altova_Hierarchical.xsd" instanceroot="{}Altova/{}Office/{}Department"/>
+						<wsdl/>
+						<parameter usageKind="variable"/>
+					</data>
+				</component>
+				<component name="group-into-blocks" library="core" uid="80935580" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="8"/>
+						<datapoint pos="1" key="9"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="371" lty="164" rbx="482" rby="220"/>
+				</component>
+				<component name="group-by" library="core" uid="80935623" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="217"/>
+						<datapoint pos="1" key="218"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="219"/>
+						<datapoint pos="1" key="220"/>
+					</targets>
+					<view ltx="371" lty="75" rbx="480" rby="131"/>
+				</component>
+				<component name="concat" library="core" uid="80935588" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="272"/>
+						<datapoint pos="1" key="40"/>
+						<datapoint pos="2" key="41"/>
+						<datapoint pos="3" key="136"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="43"/>
+					</targets>
+					<view ltx="675" lty="255" rbx="760" rby="349"/>
+				</component>
+				<component name="constant" library="core" uid="80935592" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="37"/>
+					</targets>
+					<view ltx="561" lty="232" rbx="637" rby="250"/>
+					<data>
+						<constant value="_Group" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="266">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="267">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="8" edgekey="256"/>
+							<edge vertexkey="264" edgekey="267"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="113" edgekey="241"/>
+							<edge vertexkey="261" edgekey="268"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="40" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="136" edgekey="137"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="262" edgekey="269"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="9" edgekey="242"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="89">
+						<edges>
+							<edge vertexkey="88" edgekey="90"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114">
+						<edges>
+							<edge vertexkey="41" edgekey="127"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="168">
+						<edges>
+							<edge vertexkey="217" edgekey="228"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="169">
+						<edges>
+							<edge vertexkey="218" edgekey="229"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="219">
+						<edges>
+							<edge vertexkey="260" edgekey="270"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="220">
+						<edges>
+							<edge vertexkey="272" edgekey="273"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="263">
+						<edges>
+							<edge vertexkey="159" edgekey="271"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="265">
+						<edges>
+							<edge vertexkey="170" edgekey="266"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

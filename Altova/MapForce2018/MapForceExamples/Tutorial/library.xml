@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="library.xsd">
+	<last_updated>2015-03-09T12:17:31+01:00</last_updated>
+	<publication>
+		<id>5</id>
+		<author>Alexandre Dumas</author>
+		<title>The Three Musketeers</title>
+		<genre>Fiction</genre>
+		<publish_year>1844</publish_year>
+	</publication>
+	<publication>
+		<id>6</id>
+		<author>Jules Verne</author>
+		<title>Around the World in Eighty Days</title>
+		<genre>Fiction</genre>
+		<publish_year>1873</publish_year>
+	</publication>
+	<publication>
+		<id>7</id>
+		<author>Edgar Allan Poe</author>
+		<title>The Murders in the Rue Morgue</title>
+		<genre>Fiction</genre>
+		<publish_year>1841</publish_year>
+	</publication>
+</library>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="8" editable="1">
+		<properties SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="rows" library="core" uid="15" kind="6">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="95"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="96"/>
+					</targets>
+					<view ltx="96" lty="-41" rbx="171" rby="-2"/>
+					<data>
+						<input datatype="decimal"/>
+						<wsdl/>
+						<parameter usageKind="input" name="rows" optional="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="94"/>
+					</targets>
+					<view ltx="14" lty="-20" rbx="66" rby="-2"/>
+					<data>
+						<constant value="10" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="group-into-blocks" library="core" uid="11" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="74"/>
+						<datapoint pos="1" key="98"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="105"/>
+					</targets>
+					<view ltx="239" lty="-20" rbx="350" rby="36"/>
+				</component>
+				<component name="concat" library="core" uid="20" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="108"/>
+						<datapoint pos="1" key="109"/>
+						<datapoint pos="2" key="123"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="110"/>
+					</targets>
+					<view ltx="522" lty="-31" rbx="607" rby="45"/>
+				</component>
+				<component name="constant" library="core" uid="21" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="111"/>
+					</targets>
+					<view ltx="437" lty="-51" rbx="496" rby="-33"/>
+					<data>
+						<constant value="Part" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="23" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="122"/>
+					</targets>
+					<view ltx="437" lty="38" rbx="492" rby="56"/>
+					<data>
+						<constant value=".txt" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Text file" library="text" uid="22" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="667" lty="27" rbx="826" rby="237"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" inpkey="118" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="119" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Company" type="string"/>
+									<field1 name="Department" type="string"/>
+									<field2 name="First" type="string"/>
+									<field3 name="Last" type="string"/>
+									<field4 name="Title" type="string"/>
+									<field5 name="EMail" type="string"/>
+									<field6 name="Shares" type="string"/>
+									<field7 name="LeaveTotal" type="string"/>
+									<field8 name="UsedTotal" type="string"/>
+									<field9 name="LeftTotal" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="position" library="core" uid="25" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="125"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="126"/>
+					</targets>
+					<view ltx="401" lty="-20" rbx="468" rby="19"/>
+				</component>
+				<component name="People" library="text" uid="1" kind="16">
+					<properties/>
+					<view ltx="2" lty="27" rbx="161" rby="237"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" outkey="7" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" inputinstance="People.txt" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="People" block="Rows">
+									<field0 name="Company" type="string"/>
+									<field1 name="Department" type="string"/>
+									<field2 name="First" type="string"/>
+									<field3 name="Last" type="string"/>
+									<field4 name="Title" type="string"/>
+									<field5 name="EMail" type="string"/>
+									<field6 name="Shares" type="string"/>
+									<field7 name="LeaveTotal" type="string"/>
+									<field8 name="UsedTotal" type="string"/>
+									<field9 name="LeftTotal" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="120">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="74" edgekey="101"/>
+							<edge vertexkey="119" edgekey="120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="94">
+						<edges>
+							<edge vertexkey="95" edgekey="102"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="96">
+						<edges>
+							<edge vertexkey="98" edgekey="104"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="105">
+						<edges>
+							<edge vertexkey="125" edgekey="127"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="110">
+						<edges>
+							<edge vertexkey="118" edgekey="121"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111">
+						<edges>
+							<edge vertexkey="108" edgekey="116"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="122">
+						<edges>
+							<edge vertexkey="123" edgekey="124"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="126">
+						<edges>
+							<edge vertexkey="109" edgekey="128"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

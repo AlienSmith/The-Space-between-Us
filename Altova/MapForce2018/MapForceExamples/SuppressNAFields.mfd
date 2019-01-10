@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2018r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="31">
+	<resources/>
+	<component name="defaultmap1" uid="7" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="group-by" library="core" uid="3" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="8"/>
+						<datapoint pos="1" key="15"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="26"/>
+						<datapoint pos="1" key="23"/>
+					</targets>
+					<view ltx="357" lty="53" rbx="471" rby="107"/>
+				</component>
+				<component name="group-by" library="core" uid="4" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="12"/>
+						<datapoint pos="1" key="18"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="4"/>
+					</targets>
+					<view ltx="357" lty="112" rbx="471" rby="166"/>
+				</component>
+				<component name="OrgChart" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="535" lty="3" rbx="785" rby="482"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.xmlspy.com/schemas/orgchart"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="OrgChart" expanded="1">
+										<entry name="CompanyLogo" expanded="1"/>
+										<entry name="Name">
+											<inputnodefunctions>
+												<rule applyto="self">
+													<default value="Organization Chart"/>
+												</rule>
+											</inputnodefunctions>
+										</entry>
+										<entry name="Office" inpkey="27" expanded="1">
+											<entry name="Name" inpkey="24"/>
+											<entry name="Department" inpkey="2" expanded="1">
+												<entry name="Name" inpkey="5"/>
+												<entry name="Person" inpkey="10" expanded="1">
+													<entry name="First" inpkey="21"/>
+													<entry name="Last" inpkey="30"/>
+													<entry name="Title" inpkey="33"/>
+													<entry name="EMail" inpkey="36"/>
+													<entry name="Shares" inpkey="38">
+														<inputnodefunctions>
+															<rule applyto="self">
+																<default value="0"/>
+															</rule>
+														</inputnodefunctions>
+													</entry>
+													<entry name="LeaveTotal" inpkey="39"/>
+													<entry name="LeaveUsed" inpkey="40"/>
+													<entry name="LeaveLeft" inpkey="41"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="OrgChart.xsd" instanceroot="{http://www.xmlspy.com/schemas/orgchart}OrgChart" sps="OrgChart.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="PeopleIncomplete" library="text" uid="1" kind="16">
+					<properties/>
+					<view rbx="224" rby="230"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="7" expanded="1">
+										<outputnodefunctions>
+											<rule applyto="descendants">
+												<function name="ADC07241-9EF6-4AB1-BE17-8430C157957D"/>
+												<filter datatype="string"/>
+											</rule>
+										</outputnodefunctions>
+										<entry name="Company" outkey="14"/>
+										<entry name="Department" outkey="17">
+											<outputnodefunctions>
+												<rule applyto="self">
+													<default value="unknown"/>
+												</rule>
+											</outputnodefunctions>
+										</entry>
+										<entry name="First" outkey="20"/>
+										<entry name="Last" outkey="29"/>
+										<entry name="Title" outkey="32"/>
+										<entry name="EMail" outkey="35"/>
+										<entry name="Shares" outkey="42"/>
+										<entry name="LeaveTotal" outkey="43"/>
+										<entry name="UsedTotal" outkey="44"/>
+										<entry name="LeftTotal" outkey="45"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" inputinstance="PeopleIncomplete.txt" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="PeopleIncomplete" block="Rows">
+									<field0 name="Company" type="string"/>
+									<field1 name="Department" type="string"/>
+									<field2 name="First" type="string"/>
+									<field3 name="Last" type="string"/>
+									<field4 name="Title" type="string"/>
+									<field5 name="EMail" type="string"/>
+									<field6 name="Shares" type="string"/>
+									<field7 name="LeaveTotal" type="string"/>
+									<field8 name="UsedTotal" type="string"/>
+									<field9 name="LeftTotal" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="1" to="2"/>
+			<edge from="4" to="5"/>
+			<edge from="7" to="8"/>
+			<edge from="7" to="10"/>
+			<edge from="7" to="12"/>
+			<edge from="14" to="15"/>
+			<edge from="17" to="18"/>
+			<edge from="20" to="21"/>
+			<edge from="23" to="24"/>
+			<edge from="26" to="27"/>
+			<edge from="29" to="30"/>
+			<edge from="32" to="33"/>
+			<edge from="35" to="36"/>
+			<edge from="42" to="38"/>
+			<edge from="43" to="39"/>
+			<edge from="44" to="40"/>
+			<edge from="45" to="41"/>
+		</connections>
+	</component>
+	<component name="ADC07241-9EF6-4AB1-BE17-8430C157957D" library="mapforce_nodefunction" uid="9" editable="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="11" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="800" rbx="857" rby="38"/>
+					<data>
+						<output datatype="anySimpleType"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="filter" library="core" uid="12" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+						<datapoint pos="1" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+						<datapoint/>
+					</targets>
+					<view ltx="385" lty="2" rbx="494" rby="56"/>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="142" lty="125" rbx="201" rby="142"/>
+					<data>
+						<constant value="N/A" datatype="string"/>
+					</data>
+				</component>
+				<component name="raw_value" library="core" uid="10" kind="6">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view rbx="78" rby="38"/>
+					<data>
+						<input datatype="anySimpleType"/>
+						<parameter usageKind="input" name="raw_value"/>
+					</data>
+				</component>
+				<component name="not-equal" library="core" uid="15" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="256" lty="88" rbx="334" rby="142"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="4" to="1"/>
+			<edge from="6" to="2"/>
+			<edge from="9" to="3"/>
+			<edge from="6" to="7"/>
+			<edge from="5" to="8"/>
+		</connections>
+	</component>
+</mapping>

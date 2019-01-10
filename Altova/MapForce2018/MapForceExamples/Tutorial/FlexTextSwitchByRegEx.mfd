@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2015r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="FlexTextSwitchByRegEx" library="text" uid="2" kind="16">
+					<properties/>
+					<view rbx="172" rby="200"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Root" expanded="1">
+										<entry name="Repeated split" expanded="1">
+											<entry name="Switch" expanded="1">
+												<entry name="Output A" outkey="21"/>
+												<entry name="Output B" outkey="22"/>
+												<entry name="Output C" outkey="23"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="txt" inputinstance="SampleDatabaseLog.txt" encoding="52" byteorder="1" byteordermark="0" config="FlexTextSwitchByRegEx.mft"/>
+					</data>
+				</component>
+				<component name="Output A" library="text" uid="8" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="282" rbx="462" rby="50"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="24" expanded="1">
+										<entry name="Field1" inpkey="25"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="flf" outputinstance="OutputA.txt" encoding="1000" byteorder="1" byteordermark="0">
+							<settings delimiter="true" fillchar=" " removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Field1" type="string" length="100"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="Output B" library="text" uid="9" kind="16">
+					<properties/>
+					<view ltx="282" lty="95" rbx="461" rby="145"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="26" expanded="1">
+										<entry name="Field1" inpkey="27"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="flf" outputinstance="OutputB.txt" encoding="1000" byteorder="1" byteordermark="0">
+							<settings delimiter="true" fillchar=" " removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Field1" type="string" length="100"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="Output C" library="text" uid="10" kind="16">
+					<properties/>
+					<view ltx="282" lty="190" rbx="462" rby="240"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="28" expanded="1">
+										<entry name="Field1" inpkey="29"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="flf" outputinstance="OutputC.txt" encoding="1000" byteorder="1" byteordermark="0">
+							<settings delimiter="true" fillchar=" " removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Field1" type="string" length="100"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="24" edgekey="30"/>
+							<edge vertexkey="25" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="26" edgekey="32"/>
+							<edge vertexkey="27" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="28" edgekey="34"/>
+							<edge vertexkey="29" edgekey="35"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

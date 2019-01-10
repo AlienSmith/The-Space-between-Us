@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="16">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="txt" library="text" uid="1" kind="16">
+					<properties/>
+					<view rbx="223" rby="582"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Root" expanded="1">
+										<entry name="Office" outkey="1" expanded="1">
+											<entry name="Split once" expanded="1">
+												<entry name="Office_Data" expanded="1">
+													<entry name="Number" outkey="4"/>
+													<entry name="Name" outkey="7"/>
+													<entry name="Phone" outkey="10"/>
+													<entry name="Fax" outkey="13"/>
+												</entry>
+												<entry name="Split once" expanded="1">
+													<entry name="Address_Data" outkey="55" expanded="1">
+														<entry name="Number" outkey="16"/>
+														<entry name="State" outkey="19"/>
+														<entry name="City" outkey="22"/>
+														<entry name="Zip" outkey="25"/>
+														<entry name="Street" outkey="28"/>
+													</entry>
+													<entry name="Department" outkey="58" expanded="1">
+														<entry name="Split once" expanded="1">
+															<entry name="Department_Data" expanded="1">
+																<entry name="Number" outkey="31"/>
+																<entry name="Name" outkey="34"/>
+															</entry>
+															<entry name="Person" outkey="61" expanded="1">
+																<entry name="Person_Data" expanded="1">
+																	<entry name="Number" outkey="37"/>
+																	<entry name="Last" outkey="40"/>
+																	<entry name="First" outkey="43"/>
+																	<entry name="PhoneExt" outkey="46"/>
+																	<entry name="Title" outkey="49"/>
+																	<entry name="EMail" outkey="52"/>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="txt" inputinstance="Altova_Hierarchical_FLF.txt" encoding="52" byteorder="1" byteordermark="0" config="Altova_Hierarchical_FLF.mft"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="470" lty="2" rbx="683" rby="580"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Altova" expanded="1">
+										<entry name="Office" inpkey="2" expanded="1">
+											<entry name="PrimaryKey" inpkey="5"/>
+											<entry name="Fax" inpkey="14"/>
+											<entry name="Name" inpkey="8"/>
+											<entry name="Phone" inpkey="11"/>
+											<entry name="Address" inpkey="56" expanded="1">
+												<entry name="PrimaryKey" inpkey="17"/>
+												<entry name="city" inpkey="23"/>
+												<entry name="state" inpkey="20"/>
+												<entry name="street" inpkey="29"/>
+												<entry name="zip" inpkey="26"/>
+											</entry>
+											<entry name="Department" inpkey="59" expanded="1">
+												<entry name="PrimaryKey" inpkey="32"/>
+												<entry name="Name" inpkey="35"/>
+												<entry name="Person" inpkey="62" expanded="1">
+													<entry name="PrimaryKey" inpkey="38"/>
+													<entry name="EMail" inpkey="53"/>
+													<entry name="First" inpkey="44"/>
+													<entry name="Last" inpkey="41"/>
+													<entry name="PhoneExt" inpkey="47"/>
+													<entry name="Title" inpkey="50"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Altova_Hierarchical.xsd" instanceroot="{}Altova" sps="Altova_Hierarchical.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="11" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="17" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="20" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="23" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="26" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="29" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="32" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="35" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="38" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="41" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="44" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="47" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="50" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="53" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="56" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58">
+						<edges>
+							<edge vertexkey="59" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="61">
+						<edges>
+							<edge vertexkey="62" edgekey="63"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

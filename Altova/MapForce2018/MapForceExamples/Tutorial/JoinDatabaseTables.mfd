@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="30">
+	<resources>
+		<datasources>
+			<datasource name="Nanonull">
+				<properties JDBCDriver="org.sqlite.JDBC" JDBCDatabaseURL="jdbc:sqlite:Nanonull.sqlite" DBDataSource="Nanonull.sqlite"/>
+				<database_connection vendor="sqlite" import_kind="SQLite" version="3.12" ConnectionString="Nanonull.sqlite" name="Nanonull" path="Nanonull">
+					<properties>
+						<property name="Database Kind" value="SQLite"/>
+						<property name="Import Kind" value="SQLite"/>
+						<property name="Root Object" value="main"/>
+						<property name="Data Source" value="Nanonull.sqlite"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="sql-where/order" library="db" uid="6" kind="21">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="41"/>
+						<datapoint pos="1" key="42"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="43"/>
+					</targets>
+					<view ltx="424" rbx="536" rby="54"/>
+					<data>
+						<where condition="addresses.type = :address_type" order="last_name">
+							<parameters>
+								<parameter name="address_type" type="string" auto-detect="0"/>
+							</parameters>
+						</where>
+					</data>
+				</component>
+				<component name="input" library="core" uid="7" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="40"/>
+					</targets>
+					<view ltx="302" lty="-53" rbx="383" rby="-15"/>
+					<data>
+						<input datatype="string" previewvalue="home" usepreviewvalue="1"/>
+						<parameter usageKind="input" name="input"/>
+					</data>
+				</component>
+				<component name="Text file" library="text" uid="3" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="578" rbx="746" rby="200"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" inpkey="1" expanded="1">
+										<entry name="Surname" inpkey="3"/>
+										<entry name="Name" inpkey="2"/>
+										<entry name="Email" inpkey="4"/>
+										<entry name="AddressKind" inpkey="37"/>
+										<entry name="City" inpkey="5"/>
+										<entry name="Street" inpkey="6"/>
+										<entry name="Number" inpkey="7"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" outputinstance="joined.csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Surname" type="string"/>
+									<field1 name="Name" type="string"/>
+									<field2 name="Email" type="string"/>
+									<field3 name="AddressKind" type="string"/>
+									<field4 name="City" type="string"/>
+									<field5 name="Street" type="string"/>
+									<field6 name="Number" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="2" kind="15">
+					<properties/>
+					<view rbx="155" rby="312"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="addresses" type="table">
+									<entry name="users|user_id" type="table" expanded="1"/>
+								</entry>
+								<entry name="users" type="table" outkey="69" expanded="1">
+									<entry name="addresses|user_id" type="table" outkey="70" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<database ref="Nanonull">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="Nanonull" Kind="DataSource"/>
+										<PathElement Name="main" Kind="Database"/>
+										<PathElement Name="addresses" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="Nanonull" Kind="DataSource"/>
+										<PathElement Name="main" Kind="Database"/>
+										<PathElement Name="users" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="join" library="core" uid="9" kind="32">
+					<properties/>
+					<view ltx="223" rbx="384" rby="351"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="tuple" ns="1" outkey="71" expanded="1">
+									<entry name="dynamic_tree_node0" ns="1" expanded="1">
+										<entry name="users" inpkey="72" expanded="1">
+											<entry name="first_name" type="attribute" outkey="73"/>
+											<entry name="last_name" type="attribute" outkey="74"/>
+											<entry name="email" type="attribute" outkey="75"/>
+										</entry>
+									</entry>
+									<entry name="dynamic_tree_node1" ns="1" expanded="1">
+										<entry name="addresses" inpkey="76" expanded="1">
+											<entry name="type" type="attribute" outkey="77"/>
+											<entry name="city" type="attribute" outkey="78"/>
+											<entry name="street" type="attribute" outkey="79"/>
+											<entry name="number" type="attribute" outkey="80"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<join>
+							<joinkeys/>
+							<keypaths>
+								<header>
+									<namespaces>
+										<namespace/>
+									</namespaces>
+								</header>
+								<entry>
+									<condition/>
+								</entry>
+							</keypaths>
+						</join>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="81">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="82">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="42" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="1" edgekey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="69">
+						<edges>
+							<edge vertexkey="72" edgekey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="70">
+						<edges>
+							<edge vertexkey="76" edgekey="82"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="71">
+						<edges>
+							<edge vertexkey="41" edgekey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="73">
+						<edges>
+							<edge vertexkey="2" edgekey="84"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="74">
+						<edges>
+							<edge vertexkey="3" edgekey="85"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="75">
+						<edges>
+							<edge vertexkey="4" edgekey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77">
+						<edges>
+							<edge vertexkey="37" edgekey="87"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="5" edgekey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="6" edgekey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="80">
+						<edges>
+							<edge vertexkey="7" edgekey="90"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

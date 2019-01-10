@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="49431880" editable="1" blackbox="0">
+		<properties XSLTTargetEncoding="UTF-8" ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Articles" library="xml" uid="52844138" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="793" lty="20" rbx="1033" rby="130"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Articles" expanded="1">
+										<entry name="Article" inpkey="226" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" instanceroot="{}Articles" sps="ArticleList.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Articles" library="xml" uid="49427664" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view lty="20" rbx="240" rby="130"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Articles" expanded="1">
+										<entry name="Article" outkey="215" expanded="1">
+											<entry name="Number" outkey="246"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" inputinstance="ArticlesWithDuplicates.xml" instanceroot="{}Articles"/>
+					</data>
+				</component>
+				<component name="first-items" library="core" uid="52844145" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="269"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="270"/>
+					</targets>
+					<view ltx="345" lty="118" rbx="456" rby="172"/>
+				</component>
+				<component name="document" library="xml" uid="52844140" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="524" lty="46" rbx="726" rby="141"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="compute-when" inpkey="266"/>
+							<entry name="document" expanded="1" casttotargettypemode="cast-in-subtree">
+								<entry name="Article" ns="1" inpkey="243" outkey="263" expanded="1"/>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" instanceroot="{}Articles/{}Article"/>
+						<wsdl/>
+						<parameter usageKind="variable"/>
+					</data>
+				</component>
+				<component name="group-by" library="core" uid="52844139" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="230"/>
+						<datapoint pos="1" key="231"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="232"/>
+						<datapoint/>
+					</targets>
+					<view ltx="345" lty="30" rbx="459" rby="84"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="271">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="272">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="264">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="215">
+						<edges>
+							<edge vertexkey="230" edgekey="249"/>
+							<edge vertexkey="269" edgekey="271"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="232">
+						<edges>
+							<edge vertexkey="266" edgekey="268"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="246">
+						<edges>
+							<edge vertexkey="231" edgekey="258"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="263">
+						<edges>
+							<edge vertexkey="226" edgekey="264"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="270">
+						<edges>
+							<edge vertexkey="243" edgekey="272"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<People xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="People.xsd">
+	<Person>
+		<FirstName>Marquita</FirstName>
+		<LastName>Bailey</LastName>
+		<Email>m.bailey@nanonull.com</Email>
+		<Phone>555323698</Phone>
+	</Person>
+	<Person>
+		<FirstName>Totie</FirstName>
+		<LastName>Rea</LastName>
+		<Email>t.rea@nanonull.com</Email>
+		<Phone>555598653</Phone>
+	</Person>
+	<Person>
+		<FirstName>Mark</FirstName>
+		<LastName>Marzolla</LastName>
+		<Email>m.marzolla@nanonull.com</Email>
+		<Phone>555000876</Phone>
+	</Person>
+	<Person>
+		<FirstName>Laurianne</FirstName>
+		<LastName>Huisman</LastName>
+		<Email>l.huisman@nanonull.com</Email>
+		<Phone>555357688</Phone>
+	</Person>
+</People>

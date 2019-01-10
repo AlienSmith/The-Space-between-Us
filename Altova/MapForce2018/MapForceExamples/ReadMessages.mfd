@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="23">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="rfq:requestForQuote (xs:a..." library="core" uid="10" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="43"/>
+						<datapoint pos="1" key="44"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="45"/>
+						<datapoint/>
+					</targets>
+					<view ltx="431" lty="391" rbx="594" rby="447"/>
+				</component>
+				<component name="equal" library="core" uid="14" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="76"/>
+						<datapoint pos="1" key="77"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="78"/>
+					</targets>
+					<view ltx="363" lty="484" rbx="416" rby="540"/>
+				</component>
+				<component name="constant" library="core" uid="15" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="74"/>
+					</targets>
+					<view ltx="209" lty="578" rbx="313" rby="596"/>
+					<data>
+						<constant value="Nanonull, Inc." datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="MessageFramework_extended" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
+					<view rbx="280" rby="517"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.nanonull.com/messaging"/>
+									<namespace uid="http://www.altova.com/IPO"/>
+									<namespace uid="http://www.altova.com/RFQ"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="4" expanded="1">
+								<entry name="document" ns="4" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Envelope" ns="1" expanded="1">
+										<entry name="Interchange" ns="1" expanded="1">
+											<entry name="InterchangeHeader" ns="1" expanded="1">
+												<entry name="Sender" type="attribute" outkey="66"/>
+											</entry>
+											<entry name="Message" ns="1" expanded="1">
+												<entry name="Body" ns="1" expanded="1">
+													<entry name="*">
+														<selections>
+															<qname QNameAsString="{http://www.altova.com/IPO}purchaseOrder"/>
+															<qname QNameAsString="{http://www.altova.com/RFQ}requestForQuote"/>
+														</selections>
+													</entry>
+													<entry name="purchaseOrder" ns="2" expanded="1">
+														<entry name="shipTo" displayselectionmode="all"/>
+														<entry name="shipTo" outkey="24">
+															<condition>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+																		</expression>
+																		<expression>
+																			<constant value="{http://www.altova.com/IPO}US-Address" datatype="QName"/>
+																		</expression>
+																	</function>
+																</expression>
+															</condition>
+														</entry>
+														<entry name="billTo" displayselectionmode="all"/>
+														<entry name="billTo" outkey="62">
+															<condition>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+																		</expression>
+																		<expression>
+																			<constant value="{http://www.altova.com/IPO}EU-Address" datatype="QName"/>
+																		</expression>
+																	</function>
+																</expression>
+															</condition>
+														</entry>
+														<entry name="billTo" outkey="63">
+															<condition>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+																		</expression>
+																		<expression>
+																			<constant value="{http://www.altova.com/IPO}US-Address" datatype="QName"/>
+																		</expression>
+																	</function>
+																</expression>
+															</condition>
+														</entry>
+														<entry name="comment" ns="2" outkey="56"/>
+														<entry name="Items" outkey="4"/>
+													</entry>
+													<entry name="requestForQuote" ns="3" outkey="69" expanded="1">
+														<entry name="company" outkey="82"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="MessageFramework_extended.xsd" inputinstance="messages.xml" instanceroot="{http://www.nanonull.com/messaging}Envelope"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Shipped To US" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" TnsPrefix="ipo"/>
+					<view ltx="626" rbx="870" rby="236"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/IPO"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="purchaseOrders" ns="1" expanded="1">
+										<entry name="customer" type="attribute" inpkey="67"/>
+										<entry name="purchaseOrder" ns="1" inpkey="53" expanded="1">
+											<entry name="shipTo" displayselectionmode="all"/>
+											<entry name="shipTo" inpkey="23">
+												<condition>
+													<expression>
+														<function name="equal" library="core">
+															<expression>
+																<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+															</expression>
+															<expression>
+																<constant value="{http://www.altova.com/IPO}US-Address" datatype="QName"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+											</entry>
+											<entry name="billTo" displayselectionmode="all"/>
+											<entry name="billTo" inpkey="60">
+												<condition>
+													<expression>
+														<function name="equal" library="core">
+															<expression>
+																<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+															</expression>
+															<expression>
+																<constant value="{http://www.altova.com/IPO}EU-Address" datatype="QName"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+											</entry>
+											<entry name="billTo" inpkey="61">
+												<condition>
+													<expression>
+														<function name="equal" library="core">
+															<expression>
+																<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+															</expression>
+															<expression>
+																<constant value="{http://www.altova.com/IPO}US-Address" datatype="QName"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+											</entry>
+											<entry name="comment" ns="1" inpkey="55"/>
+											<entry name="Items" inpkey="9"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ipos.xsd" instanceroot="{http://www.altova.com/IPO}purchaseOrders" sps="ipos.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="RFQ Nanonull Inc" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" TnsPrefix="rfq"/>
+					<view ltx="626" lty="355" rbx="870" rby="438"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.altova.com/RFQ"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="requests" expanded="1">
+										<entry name="requestForQuote" inpkey="70"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="rfqs.xsd" instanceroot="{http://www.altova.com/RFQ}requests" sps="rfqs.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="27">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="57">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="64">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="65">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="71">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="72">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="9" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="23" edgekey="27"/>
+							<edge vertexkey="53" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="70" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="56">
+						<edges>
+							<edge vertexkey="55" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="60" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="61" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="67" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="69">
+						<edges>
+							<edge vertexkey="43" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="74">
+						<edges>
+							<edge vertexkey="77" edgekey="79"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="44" edgekey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="76" edgekey="83"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

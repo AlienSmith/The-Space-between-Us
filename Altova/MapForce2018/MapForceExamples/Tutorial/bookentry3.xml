@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="books.xsd">
+	<book id="3">
+		<author>Herman Melville</author>
+		<title>Moby Dick</title>
+		<category>Fiction</category>
+		<year>1851</year>
+	</book>
+</books>
